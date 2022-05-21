@@ -18,6 +18,8 @@ html {
 body {
     background-color: #0d0d0d;
     color: #d8d0c5;
+    width: 100vw;
+    overflow-x: hidden;
     animation: backgroundLoad 4s forwards;
 }
 
@@ -130,7 +132,7 @@ ul {
         background-color: #0d0d0d;
     }
     100% {
-        background-color: #0f1b27;
+        background-color: #213346;
     }
 }
 
@@ -176,7 +178,7 @@ ul {
     flex-direction: column;
     align-items: center;
     opacity: 0;
-    animation: contentLoad 2s ease-in-out 5s forwards;
+    animation: contentLoad 2s ease-in-out 4s forwards;
 }
 
 .links-right .static-link {
@@ -208,7 +210,7 @@ ul {
     align-items: center;
     padding: 2rem 3rem;
     opacity: 0;
-    animation: contentLoad 2s ease-in-out 5s forwards;
+    animation: contentLoad 2s ease-in-out 4s forwards;
 }
 
 .portfolio-logo {
@@ -249,7 +251,7 @@ ul {
     width: 65vw;
     margin: 15vh auto;
     opacity: 0;
-    animation: contentLoad 2s ease-in-out 5s forwards;
+    animation: contentLoad 2s ease-in-out 4s forwards;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -307,7 +309,7 @@ ul {
     right: 0;
     width: 100%;
     height: 105%;
-    border-bottom: 2px solid #0f1b27;
+    border-bottom: 2px solid #213346;
     transition: all .5s;
 }
 
@@ -356,13 +358,13 @@ ul {
 
 /* SECTION 1 */
 .section {
+    position: relative;
     display: none;
     max-width: 65vw;
     margin: 50vh auto;
 }
 .section.showSection {
     display: flex;
-    flex-direction: column;
     align-items: flex-start;
     justify-content: center;
 }
@@ -380,12 +382,8 @@ ul {
 #section-1-heading .line {
     margin-left: 2rem;
     height: 1px;
-    width: 25vw;
+    width: 50%;
     border-bottom: 1px solid #d8d0c57a;
-}
-
-#section-1-body {
-    max-width: 50%;
 }
 
 #section-1-body p {
@@ -409,6 +407,16 @@ li {
 li i {
     margin-right: .5rem;
     color: #d8d0c5;
+}
+
+.section-1-right {
+    align-self: center;
+    z-index: -1;
+}
+
+.section-1-right img {
+    width: 500px;
+    height: auto;
 }
 
 
