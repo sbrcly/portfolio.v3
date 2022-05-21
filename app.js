@@ -7,7 +7,7 @@ const headerIntro = document.querySelector('#headerIntro');
 const myCompany = document.querySelector('#myCompany');
 
 const pageSections = ['About', 'Experience', 'Projects', 'Contact', 'Resume'];
-const introductions = ['Hi, my name is', 'Greetings, my name is', 'Welcome, my name is', 'Hello visitor, I\'m', 'Is your name also'];
+const introductions = ['Hi, my name is', 'ሰላም ስሜ ነው', 'مرحبا، اسمي', '你好，我的名字是', 'Hallo, mijn naam is', 'Bonjour, je m\'appelle', 'Hallo, mein Name ist', 'Γεια σας, το όνομά μου είναι', 'שלום, קוראים לי.', 'Halló, ég heiti', 'Dia duit, is é m\'ainm', 'Ciao, mi chiamo', 'こんにちは、私の名前は', '안녕하세요, 제 이름은', 'Olá, meu nome é.', 'नमस्कार, मेरो नाम हो', 'Bună ziua, numele meu este', 'Hola, mi nombre es', 'Hej, jag heter'];
 
 class CreatePage {
     constructor(pageSections) {

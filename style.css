@@ -16,19 +16,19 @@ html {
 }
 
 body {
-    background-color: #020c1b;
-    color: #62fcd7;
+    background-color: #0d0d0d;
+    color: #d8d0c5;
     animation: backgroundLoad 4s forwards;
 }
 
 a {
     text-decoration: none;
-    color: #fff;
+    color: #d8d0c5;
     font-size: .8rem;
 }
 
 a:hover {
-    color: #62fcd7;
+    color: #d8d0c5;
     transition: all .4s;
 }
 
@@ -37,13 +37,13 @@ a:hover {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) scaleX(1);
     height: 125px;
     width: 125px;
     -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
     clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
     opacity: 0;
-    border: 0px solid #62fcd7;
+    border: 0px solid #d8d0c5;
     border-radius: 0;
     animation: borderLoad 4s .5s forwards;
     animation-timing-function: ease-in;
@@ -66,24 +66,23 @@ a:hover {
 @keyframes borderLoad {
     0% {
         opacity: 0;
-        border: 0px solid #62fcd7;
+        border: 0px solid #d8d0c5;
         border-radius: 0;
     }
     25% {
         opacity: 1;
-        border: 30px solid #62fcd7;
-        transform: translate(-50%, -50%), scale(1);
+        border: 10px solid #d8d0c5;
+        transform: translate(-50%, -50%) scaleX(1);
         border-radius: 0;
     }
     60% {
-        opacity: 1;
-        border: 30px solid #62fcd7;
-        transform: translate(-50%, -50%), scale(1);
-        border-radius: 50%;
+        border: 10px solid #d8d0c5;
+        transform: translate(-50%, -50%) scaleX(1);
+        border-radius: 0;
     }
     100% {
-        transform: translate(-50%, -50%), scale(0);
-        border: 45vh solid #62fcd7;
+        transform: translate(-50%, -50%) scaleX(2);
+        border: 45vh solid #d8d0c5;
         opacity: 0;
         border-radius: 50%;
     }
@@ -106,13 +105,13 @@ a:hover {
 
 @keyframes backgroundLoad {
     0% {
-        background-color: #020c1b;
+        background-color: #0d0d0d;
     }
     75% {
-        background-color: #020c1b;
+        background-color: #0d0d0d;
     }
     100% {
-        background-color: #0a192f;
+        background-color: #0f1b27;
     }
 }
 
@@ -144,7 +143,7 @@ a:hover {
 }
 
 .static-link:hover {
-    color: #62fcd7;
+    color: #d8d0c5;
     transform: translateY(-5px);
     transition: all .5s;
 }
@@ -152,7 +151,7 @@ a:hover {
 .links-right {
     position: fixed;
     bottom: 0vh;
-    right: 2vw;
+    right: 1vw;
     width: 100px;
     display: flex;
     flex-direction: column;
@@ -165,7 +164,7 @@ a:hover {
     transform: rotate(90deg);
     font-size: .8rem;
     letter-spacing: 2px;
-    color: #62fcd7;
+    color: #d8d0c5;
 }
 
 .links-right .static-link:hover {
@@ -179,7 +178,6 @@ a:hover {
 }
 
 #hr-right {
-    /* transform: rotate(90deg); */
     height: 90px;
     margin-top: 5rem;
 }
@@ -197,16 +195,16 @@ a:hover {
 .portfolio-logo {
     -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
     clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-    border: 7px solid #62fcd7;
-    border-radius: 50%;
+    border: 3px solid #d8d0c5;
 }
 
 .nav-link {
     margin-left: 2rem;
+    letter-spacing: 1px;
 }
 
 .nav-link span {
-    color: #62fcd7;
+    color: #d8d0c5;
     margin-right: .25rem;
 }
 
@@ -217,14 +215,14 @@ a:hover {
 }
 
 .nav-link:last-of-type {
-    border: 1px solid #62fcd7;
-    color: #62fcd7;
+    border: 1px solid #d8d0c5;
+    color: #d8d0c5;
     padding: .5rem .75rem;
-    border-radius: 5px;
+    border-radius: 3px;
 }
 
 .nav-link:last-of-type:hover {
-    background-color: #62fcd81f;
+    background-color: #d8d0c51e;
 }
 
 /* HEADER */
@@ -255,21 +253,21 @@ a:hover {
 }
 
 #myName {
-    color: #ccd6f6;
+    color: #d8d0c5;
     font-size: 4rem;
     font-weight: 700;
     line-height: 1.25;
 }
 
 #myJob {
-    color: #8892b0;
+    color: #f2efea60;
     font-size: 4rem;
     font-weight: 700;
     line-height: 1.25;
 }
 
 #jobDescription {
-    color: #636f8b;
+    color: #f2efea60;
     font-size: 1rem;
     font-weight: 400;
     max-width: 60%;
@@ -278,10 +276,10 @@ a:hover {
 
 #myCompany {
     position: relative;
-    color: #62fcd7;
+    color: #d8d0c5;
     font-size: 1rem;
     font-weight: 400;
-    border-bottom: .5px solid #62fcd7;
+    border-bottom: .5px solid #d8d0c5;
 }
 
 #myCompany span {
@@ -290,39 +288,41 @@ a:hover {
     right: 0;
     width: 100%;
     height: 105%;
-    border-bottom: 2px solid #0a192f;
+    border-bottom: 2px solid #0f1b27;
     transition: all .5s;
 }
 
 #myCompany span.removeOverlay {
-    animation: removeOverlay .5s forwards;
+    animation: removeOverlay .6s ease-out forwards;
 }
 
 #headerBtn {
     padding: .75rem 1.5rem;
-    border: 1px solid #62fcd7;
-    color: #62fcd7;
+    border: 1px solid #d8d0c5;
+    color: #d8d0c5;
     background-color: transparent;
     font-size: .9rem;
-    border-radius: 5px;
+    border-radius: 3px;
     letter-spacing: 3px;
 }
 
 #headerBtn:hover {
     cursor: pointer;
-    background-color: #62fcd81f;
+    background-color: #d8d0c51e;
     transition: all .3s;
 }
 
 @keyframes hoverOver {
     0% {
         opacity: 1;
+        transform: rotateX(0deg);
     }
     50% {
         opacity: 0;
     }
     100% {
         opacity: 1;
+        transform: rotateX(360deg);
     }
 }
 
