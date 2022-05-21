@@ -1,8 +1,10 @@
 // NAV SELECTORS
 const mainNav = document.querySelector('#mainNav');
 const navRight = document.querySelector('.nav-right');
+const logo = document.querySelector('#logo');
 
 // HEADER SELECTORS
+const header = document.querySelector('#header');
 const headerIntro = document.querySelector('#headerIntro');
 const myCompany = document.querySelector('#myCompany');
 
@@ -33,7 +35,10 @@ const pageSections = document.querySelectorAll('.section');
 class CreatePage {
     constructor(sectionLinks, pageSections) {
         this.sectionLinks = sectionLinks,
-        this.pageSections = pageSections
+        this.pageSections = pageSections,
+        this.lastScrollTop;
+
+        let originalPosition = header.getBoundingClientRect().top;
 
         headerIntro.addEventListener('click', () => {
             headerIntro.classList.add('runAnimation');
@@ -52,19 +57,34 @@ class CreatePage {
         myCompany.addEventListener('mouseout', () => {
             myCompany.firstElementChild.classList.remove('removeOverlay');
         });
+        window.addEventListener('scroll', (e) => {
+
+            if (header.getBoundingClientRect().top > this.lastScrollTop &&
+                header.getBoundingClientRect().top <= logo.getBoundingClientRect().top) {
+                mainNav.classList.remove('hideNav');
+                mainNav.classList.add('navShadow');
+            }   else if (header.getBoundingClientRect().top <= logo.getBoundingClientRect().top) {
+                mainNav.classList.add('hideNav');
+            } ;
+            if (header.getBoundingClientRect().top >= originalPosition) {
+                mainNav.classList.remove('navShadow');
+                mainNav.classList.remove('hideNav');
+            };
+            this.lastScrollTop = header.getBoundingClientRect().top;
+        });
 
         this.createNav();
         setTimeout(() => {
             for (let section of this.pageSections) {
                 section.classList.add('showSection');
             }
-        }, 4000);
+        }, 5000);
     }
     createNav = () => {
         let linkNum = 1;
         this.sectionLinks.forEach(section => {
             const newNavLink = document.createElement('a');
-            newNavLink.setAttribute('href', `/#${section}`);
+            newNavLink.setAttribute('href', `#${section}`);
             newNavLink.classList.add('nav-link');
             if (linkNum === 1) {
                 newNavLink.innerHTML = `<span>I.</span> ${section}`;

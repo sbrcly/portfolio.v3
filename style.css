@@ -13,6 +13,7 @@ html {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
     font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -205,12 +206,29 @@ ul {
 
 /* MAIN NAVBAR */
 #mainNav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: transparent;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2rem 3rem;
+    padding: 1.5rem 3rem;
     opacity: 0;
     animation: contentLoad 2s ease-in-out 4s forwards;
+    transition: all .5s;
+    z-index: 9;
+}
+
+#mainNav.hideNav {
+    transform: translateY(-15vh);
+    transition: all 1s;
+}
+
+#mainNav.navShadow {
+    background-color: #213346;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
 }
 
 .portfolio-logo {
@@ -249,7 +267,7 @@ ul {
 /* HEADER */
 #header {
     width: 65vw;
-    margin: 15vh auto;
+    margin: 25vh auto;
     opacity: 0;
     animation: contentLoad 2s ease-in-out 4s forwards;
     display: flex;
@@ -361,7 +379,8 @@ ul {
     position: relative;
     display: none;
     max-width: 65vw;
-    margin: 50vh auto;
+    margin: 40vh auto;
+    padding-top: 10vh;
 }
 .section.showSection {
     display: flex;
@@ -415,6 +434,7 @@ li i {
 }
 
 .section-1-right img {
+    margin-left: .5rem;
     width: 500px;
     height: auto;
 }
