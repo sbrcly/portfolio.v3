@@ -21,6 +21,21 @@ body {
     animation: backgroundLoad 4s forwards;
 }
 
+/* SCROLLBAR RESET */
+body::-webkit-scrollbar {
+    width: 7px;               /* width of the entire scrollbar */
+}
+  
+body::-webkit-scrollbar-track {
+    background: transparent;        /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #d8d0c58f;    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    border: none;  /* creates padding around scroll thumb */
+}
+
 a {
     text-decoration: none;
     color: #d8d0c5;
@@ -30,6 +45,10 @@ a {
 a:hover {
     color: #d8d0c5;
     transition: all .4s;
+}
+
+ul {
+    list-style: none;
 }
 
 /* INITIAL LOAD ANIMATIONS */
@@ -157,7 +176,7 @@ a:hover {
     flex-direction: column;
     align-items: center;
     opacity: 0;
-    animation: contentLoad 2s ease-in-out 4s forwards;
+    animation: contentLoad 2s ease-in-out 5s forwards;
 }
 
 .links-right .static-link {
@@ -189,7 +208,7 @@ a:hover {
     align-items: center;
     padding: 2rem 3rem;
     opacity: 0;
-    animation: contentLoad 2s ease-in-out 4s forwards;
+    animation: contentLoad 2s ease-in-out 5s forwards;
 }
 
 .portfolio-logo {
@@ -222,7 +241,7 @@ a:hover {
 }
 
 .nav-link:last-of-type:hover {
-    background-color: #d8d0c51e;
+    background-color: #d8d0c510;
 }
 
 /* HEADER */
@@ -230,7 +249,7 @@ a:hover {
     width: 65vw;
     margin: 15vh auto;
     opacity: 0;
-    animation: contentLoad 2s ease-in-out 4s forwards;
+    animation: contentLoad 2s ease-in-out 5s forwards;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -308,8 +327,8 @@ a:hover {
 
 #headerBtn:hover {
     cursor: pointer;
-    background-color: #d8d0c51e;
-    transition: all .3s;
+    background-color: #d8d0c510;
+    transition: all .4s;
 }
 
 @keyframes hoverOver {
@@ -334,6 +353,65 @@ a:hover {
         width: 0%;
     }
 }
+
+/* SECTION 1 */
+.section {
+    display: none;
+    max-width: 65vw;
+    margin: 50vh auto;
+}
+.section.showSection {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+#section-1-heading {
+    display: flex;
+    align-items: center;
+}
+
+#about-me span {
+    font-weight: 100;
+    margin-right: .5rem;
+}
+
+#section-1-heading .line {
+    margin-left: 2rem;
+    height: 1px;
+    width: 25vw;
+    border-bottom: 1px solid #d8d0c57a;
+}
+
+#section-1-body {
+    max-width: 50%;
+}
+
+#section-1-body p {
+    color: #f2efea60;
+    margin: 1rem 0;
+}
+
+#section-1-body p span {
+    color: #d8d0c5;
+}
+
+#skills-list {
+    display: flex;
+    justify-content: space-around;
+}
+
+li {
+    color: #f2efea60;
+}
+
+li i {
+    margin-right: .5rem;
+    color: #d8d0c5;
+}
+
+
 
 
 
