@@ -7,6 +7,7 @@ const logo = document.querySelector('#logo');
 const header = document.querySelector('#header');
 const headerIntro = document.querySelector('#headerIntro');
 const myCompany = document.querySelector('#myCompany');
+const myJob = document.querySelector('#myJob span');
 
 const sectionLinks = ['About', 'Projects', 'Contact', 'Resume'];
 const introductions = [
@@ -31,6 +32,7 @@ const introductions = [
     'Hej, jag heter'
 ];
 const pageSections = document.querySelectorAll('.section');
+const jobs = ['software_engineer.', 'software_developer.', 'programmer.', 'developer.', 'coder.', 'computer_programmer.', 'web_developer.', 'key_puncher.', 'computer_geek.', 'computer_nerd.'];
 
 class CreatePage {
     constructor(sectionLinks, pageSections) {
@@ -50,6 +52,14 @@ class CreatePage {
                 headerIntro.classList.remove('runAnimation');
             },1100);
         });
+
+        setInterval(() => {
+            myJob.classList.remove('runJobAnim');
+                let randomNum = Math.floor(Math.random() * jobs.length);
+                myJob.setAttribute('data-text', jobs[randomNum]);
+                myJob.innerText = jobs[randomNum];
+                myJob.classList.add('runJobAnim');
+        }, 5000)
 
         myCompany.addEventListener('mouseover', () => {
             myCompany.firstElementChild.classList.add('removeOverlay');
