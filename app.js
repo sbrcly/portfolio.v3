@@ -97,7 +97,7 @@ class CreatePage {
             for (let section of this.pageSections) {
                 section.classList.add('showSection');
             }
-        }, 4500);
+        }, 4750);
     }
     createNav = () => {
         let linkNum = 1;
