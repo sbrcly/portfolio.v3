@@ -9,7 +9,10 @@ const headerIntro = document.querySelector('#headerIntro');
 const myCompany = document.querySelector('#myCompany');
 const myJob = document.querySelector('#myJob span');
 
-const sectionLinks = ['Home', 'About', 'Projects', 'Archives', 'Contact', 'Resume'];
+// SECTION 1 SELECTORS
+const section1 = document.querySelector('#About');
+
+const sectionLinks = ['About', 'Projects', 'Archives', 'Contact', 'Resume'];
 const introductions = [
     'Hi, my name is',
     'ሰላም ስሜ ነው',
@@ -40,7 +43,7 @@ class CreatePage {
         this.pageSections = pageSections,
         this.lastScrollTop;
 
-        let originalPosition = header.getBoundingClientRect().top;
+        this.originalPosition = header.getBoundingClientRect().top;
 
         headerIntro.addEventListener('click', () => {
             headerIntro.classList.add('runAnimation');
@@ -68,19 +71,7 @@ class CreatePage {
             myCompany.firstElementChild.classList.remove('removeOverlay');
         });
         window.addEventListener('scroll', (e) => {
-
-            if (header.getBoundingClientRect().top > this.lastScrollTop &&
-                header.getBoundingClientRect().top <= logo.getBoundingClientRect().top) {
-                mainNav.classList.remove('hideNav');
-                mainNav.classList.add('navShadow');
-            }   else if (header.getBoundingClientRect().top <= logo.getBoundingClientRect().top) {
-                mainNav.classList.add('hideNav');
-            } ;
-            if (header.getBoundingClientRect().top >= originalPosition) {
-                mainNav.classList.remove('navShadow');
-                mainNav.classList.remove('hideNav');
-            };
-            this.lastScrollTop = header.getBoundingClientRect().top;
+            this.scrollActions(e);
         });
 
         this.createNav();
@@ -112,6 +103,26 @@ class CreatePage {
             navRight.append(newNavLink);
             linkNum++;
         });
+    }
+    scrollActions = (e) => {
+        if (header.getBoundingClientRect().top > this.lastScrollTop &&
+            header.getBoundingClientRect().top <= logo.getBoundingClientRect().top) {
+            mainNav.classList.remove('hideNav');
+            mainNav.classList.add('navShadow');
+        }   else if (header.getBoundingClientRect().top <= logo.getBoundingClientRect().top) {
+            mainNav.classList.add('hideNav');
+        };
+        if (header.getBoundingClientRect().top >= this.originalPosition) {
+            mainNav.classList.remove('navShadow');
+            mainNav.classList.remove('hideNav');
+        };
+        this.lastScrollTop = header.getBoundingClientRect().top;
+
+        if (section1.getBoundingClientRect().top <= 500) {
+            section1.classList.add('unhideSection');
+        }   else {
+            section1.classList.remove('unhideSection');
+        }
     }
 }
 
