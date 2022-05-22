@@ -267,7 +267,7 @@ ul {
 }
 
 /* HEADER */
-#header {
+header {
     width: 65vw;
     margin: 25vh auto;
     opacity: 0;
@@ -310,6 +310,7 @@ ul {
 #myJob span {
     position: relative;
     font-family: 'Titillium Web', sans-serif;
+    letter-spacing: 1px;
     color: transparent;
     -webkit-text-stroke: 0px #f2efea60;
 }
@@ -516,5 +517,10 @@ li i {
 @media screen and (min-width: 2000px){
     html {
         font-size: 20px;
+    }
+    .section-1-right img {
+        margin-left: .5rem;
+        width: 700px;
+        height: auto;
     }
 }

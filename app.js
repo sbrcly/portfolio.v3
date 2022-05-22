@@ -4,12 +4,12 @@ const navRight = document.querySelector('.nav-right');
 const logo = document.querySelector('#logo');
 
 // HEADER SELECTORS
-const header = document.querySelector('#header');
+const header = document.querySelector('header');
 const headerIntro = document.querySelector('#headerIntro');
 const myCompany = document.querySelector('#myCompany');
 const myJob = document.querySelector('#myJob span');
 
-const sectionLinks = ['About', 'Projects', 'Contact', 'Resume'];
+const sectionLinks = ['Home', 'About', 'Projects', 'Archives', 'Contact', 'Resume'];
 const introductions = [
     'Hi, my name is',
     'ሰላም ስሜ ነው',
@@ -32,7 +32,7 @@ const introductions = [
     'Hej, jag heter'
 ];
 const pageSections = document.querySelectorAll('.section');
-const jobs = ['software_engineer.', 'software_developer.', 'programmer.', 'developer.', 'coder.', 'computer_programmer.', 'web_developer.', 'key_puncher.', 'computer_geek.', 'computer_nerd.'];
+const jobs = ['software_engineer.', 'softwareEngineer.', 'software_developer.', 'softwareDeveloper.', 'programmer.', 'developer.', '<p>coder</p>.', 'computer_programmer.', 'computerProgrammer.', 'web_developer.', 'webDeveloper.', 'computer_geek.', 'computerGeek.', 'computer_nerd.', 'computerNerd.'];
 
 class CreatePage {
     constructor(sectionLinks, pageSections) {
@@ -88,7 +88,7 @@ class CreatePage {
             for (let section of this.pageSections) {
                 section.classList.add('showSection');
             }
-        }, 5000);
+        }, 4500);
     }
     createNav = () => {
         let linkNum = 1;
@@ -106,6 +106,8 @@ class CreatePage {
                 newNavLink.innerHTML = `<span>IV.</span> ${section}`;
             }   else if (linkNum === 5) {
                 newNavLink.innerHTML = `<span>V.</span> ${section}`;
+            }   else if (linkNum === 6) {
+                newNavLink.innerHTML = `<span>VI.</span> ${section}`;
             }
             navRight.append(newNavLink);
             linkNum++;
