@@ -138,7 +138,7 @@ class CreatePage {
         this.lastScrollTop = header.getBoundingClientRect().top;
 
         for (let section of sections) {
-            if (section.getBoundingClientRect().top <= 600) {
+            if (section.getBoundingClientRect().top <= 700) {
                 section.classList.add('unhide');
             }   else {
                 section.classList.remove('unhide');
@@ -146,7 +146,7 @@ class CreatePage {
         };
 
         for (let project of projects) {
-            if (project.getBoundingClientRect().top <= 600) {
+            if (project.getBoundingClientRect().top <= 700) {
                 project.classList.add('unhide');
             }   else {
                 project.classList.remove('unhide');

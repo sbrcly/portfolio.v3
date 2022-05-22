@@ -420,7 +420,7 @@ header {
     margin: 40vh auto;
     padding-top: 10vh;
     opacity: 0;
-    transition: all .5s;
+    transition: all 1s;
 }
 
 .section.showSection {
@@ -511,7 +511,7 @@ li i {
     width: 100%;
     display: flex;
     opacity: 0;
-    transition: all .75s;
+    transition: all 1s;
 }
 
 .project-1-left {
@@ -547,6 +547,10 @@ li i {
 
 .project-1-right h3 {
     font-size: 1.25rem;
+}
+
+.project-1-right h3 span {
+    color: #f2efea60;
 }
 
 .project-1 .project-description {
@@ -587,7 +591,7 @@ li i {
     width: 100%;
     display: flex;
     opacity: 0;
-    transition: all .75s;
+    transition: all 1s;
 }
 
 .project-2-right {
@@ -621,6 +625,10 @@ li i {
     font-size: 1.25rem;
 }
 
+.project-2-left h3 span {
+    color: #f2efea60;
+}
+
 .project-2 .project-description {
     width: 115%;
     text-align: left;
@@ -636,7 +644,7 @@ li i {
 /* KEEP AT BOTTOM OF SCRIPT */
 .unhide {
     opacity: 1;
-    transition: all .75s;
+    transition: all 1s;
 }
 
 
