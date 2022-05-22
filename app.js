@@ -9,8 +9,14 @@ const headerIntro = document.querySelector('#headerIntro');
 const myCompany = document.querySelector('#myCompany');
 const myJob = document.querySelector('#myJob span');
 
+// ALL SECTIONS
+const sections = document.querySelectorAll('.section');
+
 // SECTION 1 SELECTORS
 const section1 = document.querySelector('#About');
+
+// SECTION 2 SELECTORS
+const section2 = document.querySelector('#Projects');
 
 const sectionLinks = ['About', 'Projects', 'Archives', 'Contact', 'Resume'];
 const introductions = [
@@ -35,7 +41,19 @@ const introductions = [
     'Hej, jag heter'
 ];
 const pageSections = document.querySelectorAll('.section');
-const jobs = ['software_engineer.', 'softwareEngineer.', 'software_developer.', 'softwareDeveloper.', 'programmer.', 'developer.', '<p>coder</p>.', 'computer_programmer.', 'computerProgrammer.', 'web_developer.', 'webDeveloper.', 'computer_geek.', 'computerGeek.', 'computer_nerd.', 'computerNerd.'];
+const jobs = [
+    'software_engineer.',
+    'softwareEngineer.',
+    'software_developer.',
+    'softwareDeveloper.',
+    'programmer.',
+    'developer.',
+    '<p>coder</p>.',
+    'computer_programmer.',
+    'computerProgrammer.',
+    'web_developer.',
+    'webDeveloper.'
+];
 
 // JOB ANIMATION
 setInterval(() => {
@@ -74,7 +92,6 @@ class CreatePage {
         window.addEventListener('scroll', (e) => {
             this.scrollActions(e);
         });
-
         this.createNav();
         setTimeout(() => {
             for (let section of this.pageSections) {
@@ -119,11 +136,13 @@ class CreatePage {
         };
         this.lastScrollTop = header.getBoundingClientRect().top;
 
-        if (section1.getBoundingClientRect().top <= 500) {
-            section1.classList.add('unhideSection');
-        }   else {
-            section1.classList.remove('unhideSection');
-        }
+        for (let section of sections) {
+            if (section.getBoundingClientRect().top <= 500) {
+                section.classList.add('unhideSection');
+            }   else {
+                section.classList.remove('unhideSection');
+            };
+        };
     }
 }
 
