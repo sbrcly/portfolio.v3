@@ -423,11 +423,6 @@ header {
     transition: all .5s;
 }
 
-.section.unhideSection {
-    opacity: 1;
-    transition: all .5s;
-}
-
 .section.showSection {
     display: flex;
     align-items: flex-start;
@@ -502,10 +497,21 @@ li i {
     border-bottom: 1px solid #d8d0c57a;
 }
 
+.disabled-link {
+    font-size: 1.25rem;
+}
+
+.disabled-link:hover {
+    cursor: not-allowed;
+}
+
+/* PROJECT 1 */
 .project-1 {
-    margin: 4rem 0;
+    margin: 5rem 0;
     width: 100%;
     display: flex;
+    opacity: 0;
+    transition: all .75s;
 }
 
 .project-1-left {
@@ -527,17 +533,6 @@ li i {
     transition: all .35s;
 }
 
-/* .project-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #378c839e;
-    border-radius: 5px;
-    z-index: 2;
-} */
-
 .project-1-right {
     padding: 1rem 0;
     display: flex;
@@ -554,7 +549,7 @@ li i {
     font-size: 1.25rem;
 }
 
-.project-description {
+.project-1 .project-description {
     width: 115%;
     text-align: right;
     margin: 2rem 0;
@@ -583,7 +578,65 @@ li i {
 
 .project-links a i {
     font-size: 1.25rem;
-    margin: .5rem .75rem;
+    margin: .5rem 1rem;
+}
+
+/* PROJECT 2 */
+.project-2 {
+    margin: 5rem 0;
+    width: 100%;
+    display: flex;
+    opacity: 0;
+    transition: all .75s;
+}
+
+.project-2-right {
+    position: relative;
+    width: 60%;
+    border-radius: 5px;
+}
+
+.project-2-right img {
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.project-2-right img:hover {
+    cursor: pointer;
+    transform: scale(1.01);
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+    transition: all .35s;
+}
+
+.project-2-left {
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 40%;
+}
+
+.project-2-left h3 {
+    font-size: 1.25rem;
+}
+
+.project-2 .project-description {
+    width: 115%;
+    text-align: left;
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background-color: #213346;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+    border-radius: 3px;
+    z-index: 9;
+}
+
+
+/* KEEP AT BOTTOM OF SCRIPT */
+.unhide {
+    opacity: 1;
+    transition: all .75s;
 }
 
 

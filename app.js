@@ -17,6 +17,7 @@ const section1 = document.querySelector('#About');
 
 // SECTION 2 SELECTORS
 const section2 = document.querySelector('#Projects');
+const projects = document.querySelectorAll('.project');
 
 const sectionLinks = ['About', 'Projects', 'Archives', 'Contact', 'Resume'];
 const introductions = [
@@ -137,12 +138,21 @@ class CreatePage {
         this.lastScrollTop = header.getBoundingClientRect().top;
 
         for (let section of sections) {
-            if (section.getBoundingClientRect().top <= 500) {
-                section.classList.add('unhideSection');
+            if (section.getBoundingClientRect().top <= 600) {
+                section.classList.add('unhide');
             }   else {
-                section.classList.remove('unhideSection');
+                section.classList.remove('unhide');
             };
         };
+
+        for (let project of projects) {
+            if (project.getBoundingClientRect().top <= 600) {
+                project.classList.add('unhide');
+            }   else {
+                project.classList.remove('unhide');
+            };
+        }
+
     }
 }
 
