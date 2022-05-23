@@ -18,8 +18,10 @@ const section1 = document.querySelector('#About');
 // SECTION 2 SELECTORS
 const section2 = document.querySelector('#Projects');
 const projects = document.querySelectorAll('.project');
+const otherProjects = document.querySelector('.other-projects');
+const imgOverlay = document.querySelectorAll('.image-overlay');
 
-const sectionLinks = ['About', 'Projects', 'Contact', 'Resume'];
+const sectionLinks = ['Home', 'About', 'Projects', 'Contact', 'Resume'];
 const introductions = [
     'Hi, my name is',
     'ሰላም ስሜ ነው',
@@ -41,6 +43,7 @@ const introductions = [
     'Hola, mi nombre es',
     'Hej, jag heter'
 ];
+const home = document.querySelector('#Home');
 const pageSections = document.querySelectorAll('.section');
 const jobs = [
     'software_engineer.',
@@ -93,11 +96,20 @@ class CreatePage {
         window.addEventListener('scroll', (e) => {
             this.scrollActions(e);
         });
+        for (let img of imgOverlay) {
+            img.addEventListener('mouseover', () => {
+                img.parentElement.firstElementChild.classList.add('animateBg');
+            });
+            img.addEventListener('mouseout', () => {
+                img.parentElement.firstElementChild.classList.remove('animateBg');
+            })
+        }
         this.createNav();
         setTimeout(() => {
             for (let section of this.pageSections) {
                 section.classList.add('showSection');
             }
+            home.classList.add('showSection');
         }, 4750);
     }
     createNav = () => {
@@ -152,7 +164,6 @@ class CreatePage {
                 project.classList.remove('unhide');
             };
         }
-
     }
 }
 
