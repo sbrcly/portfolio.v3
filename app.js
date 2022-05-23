@@ -43,7 +43,7 @@ const introductions = [
     'Hola, mi nombre es',
     'Hej, jag heter'
 ];
-const home = document.querySelector('#Home');
+const home = document.querySelector('#home');
 const pageSections = document.querySelectorAll('.section');
 const jobs = [
     'software_engineer.',
@@ -110,6 +110,7 @@ class CreatePage {
                 section.classList.add('showSection');
             }
             home.classList.add('showSection');
+            window.scrollTo(0, section2.getBoundingClientRect().top);
         }, 4750);
     }
     createNav = () => {
@@ -133,6 +134,11 @@ class CreatePage {
             }
             navRight.append(newNavLink);
             linkNum++;
+            if (newNavLink.innerHTML === `<span>I.</span> Home`) {
+                newNavLink.addEventListener('click', () => {
+                    window.scrollTo(0,0);
+                });
+            };
         });
     }
     scrollActions = (e) => {

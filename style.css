@@ -819,11 +819,11 @@ li i {
 }
 
 .other-projects.unhide .other-project:first-of-type {
-    animation: otherProjLoad .6s ease-out forwards;
+    animation: otherProjLoad 1s ease-out forwards;
 }
 
 .other-projects.unhide .other-project:last-of-type {
-    animation: otherProjLoad .6s ease-out .5s forwards;
+    animation: otherProjLoad 1s ease-out .5s forwards;
 }
 
 .other-projects.unhide .other-project:hover {
