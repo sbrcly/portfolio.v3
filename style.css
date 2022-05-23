@@ -553,6 +553,27 @@ li i {
     transition: all .35s;
 }
 
+.project-1-left .image-backlay {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #a1d5ca;
+    border-radius: 3px;
+    z-index: -1;
+}
+
+.project-1-left .image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #a1d5ca90;
+    border-radius: 3px;
+}
+
 .project-1-right {
     padding: 1rem 0;
     display: flex;
@@ -636,6 +657,27 @@ li i {
     transition: all .35s;
 }
 
+.project-2-right .image-backlay {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #a1d5ca;
+    border-radius: 3px;
+    z-index: -1;
+}
+
+.project-2-right .image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #a1d5ca90;
+    border-radius: 3px;
+}
+
 .project-2-left {
     padding: 1rem 0;
     display: flex;
@@ -681,7 +723,16 @@ li i {
 
 .other-projects h3 {
     font-size: 1.5rem;
-    margin: 10rem 0 5rem 0;
+    margin: 10rem 0 1rem 0;
+}
+
+.other-project-blurb {
+    font-family: 'Share Tech Mono', monospace;
+    color: #a1d5ca;
+}
+
+.other-project-blurb:last-of-type {
+    margin-bottom: 3rem;
 }
 
 .other-project-tiles {
