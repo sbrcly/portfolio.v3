@@ -218,7 +218,7 @@ ul {
     opacity: 0;
     animation: contentLoad 2s ease-in-out 4s forwards;
     transition: all .5s;
-    z-index: 9;
+    z-index: 99;
 }
 
 #mainNav.hideNav {
@@ -546,7 +546,7 @@ li i {
 }
 
 .project-1-right h3 {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
 }
 
 .project-1-right h3 span {
@@ -622,7 +622,7 @@ li i {
 }
 
 .project-2-left h3 {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
 }
 
 .project-2-left h3 span {
@@ -639,6 +639,71 @@ li i {
     border-radius: 3px;
     z-index: 9;
 }
+
+/* OTHER PROJECTS */
+.other-projects {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.other-projects h3 {
+    font-size: 1.5rem;
+    margin: 10rem 0 5rem 0;
+}
+
+.other-project-tiles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.other-project {
+    width: 20vw;
+    height: 40vh;
+    background-color: #213346;
+    padding: 1rem 2rem;
+    margin: .5rem;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+    transition: all .4s;
+    text-align: left;
+}
+
+.other-project:hover {
+    transform: translateY(-10px);
+    transition: all .4s;
+}
+
+.other-project-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.other-project-header a {
+    font-size: 1.5rem;
+}
+
+.other-project-body {
+    margin: 2rem 0;
+}
+
+.other-project-body h4 {
+    font-size: 1.25rem;
+    padding-bottom: 1rem;
+}
+
+.other-project-body p {
+    font-size: .9rem;
+}
+
+.other-project-tech p span {
+    font-size: .9rem;
+    margin-right: .75rem;
+    color: #f2efea60;
+}
+
 
 
 /* KEEP AT BOTTOM OF SCRIPT */

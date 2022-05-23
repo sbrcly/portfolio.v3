@@ -19,7 +19,7 @@ const section1 = document.querySelector('#About');
 const section2 = document.querySelector('#Projects');
 const projects = document.querySelectorAll('.project');
 
-const sectionLinks = ['About', 'Projects', 'Archives', 'Contact', 'Resume'];
+const sectionLinks = ['About', 'Projects', 'Contact', 'Resume'];
 const introductions = [
     'Hi, my name is',
     'ሰላም ስሜ ነው',
