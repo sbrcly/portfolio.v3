@@ -832,7 +832,7 @@ li i {
 
 @keyframes otherProjLoad {
     0% {
-        transform: translateY(50px);
+        transform: translateY(25px);
         opacity: 0;
     }
     60% {
