@@ -21,6 +21,9 @@ const projects = document.querySelectorAll('.project');
 const otherProjects = document.querySelector('.other-projects');
 const imgOverlay = document.querySelectorAll('.image-overlay');
 
+// FOOTER SELECTORS
+const footer = document.querySelector('footer');
+
 const sectionLinks = ['Home', 'About', 'Projects', 'Contact', 'Resume'];
 const introductions = [
     'Hi, my name is',
@@ -108,6 +111,7 @@ class CreatePage {
                 section.classList.add('showSection');
             }
             home.classList.add('showSection');
+            footer.classList.add('showSection');
             window.scrollTo(0, section2.getBoundingClientRect().top);
         }, 5000);
     }
@@ -154,7 +158,7 @@ class CreatePage {
         this.lastScrollTop = header.getBoundingClientRect().top;
 
         for (let section of sections) {
-            if (section.getBoundingClientRect().top <= 700) {
+            if (section.getBoundingClientRect().top <= 600) {
                 section.classList.add('unhide');
             }   else {
                 section.classList.remove('unhide');
@@ -162,7 +166,7 @@ class CreatePage {
         };
 
         for (let project of projects) {
-            if (project.getBoundingClientRect().top <= 700) {
+            if (project.getBoundingClientRect().top <= 600) {
                 project.classList.add('unhide');
             }   else {
                 project.classList.remove('unhide');

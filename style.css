@@ -435,7 +435,7 @@ header.showSection {
     position: relative;
     display: none;
     max-width: 65vw;
-    margin: 40vh auto;
+    margin: 25vh auto;
     padding-top: 10vh;
     opacity: 0;
     transition: all 1s;
@@ -883,7 +883,67 @@ li i {
     font-family: 'Share Tech Mono', monospace;
 }
 
+/* CONTACT SECTION */
+#Contact {
+    opacity: 0;
+    flex-direction: column;
+    align-items: center;
+}
 
+#Contact.unhide {
+    opacity: 1;
+}
+
+#still-here {
+    color: #a1d5ca;
+    font-family: 'Share Tech Mono', monospace;
+}
+
+#Contact h3 {
+    font-size: 3rem;
+    letter-spacing: 1px;
+    padding: .5rem 0;
+}
+
+#Contact p:last-of-type {
+    color: #f2efea60;
+    max-width: 66.66666%;
+    text-align: center;
+}
+
+#say-hello {
+    margin: 2rem;
+    font-family: 'Share Tech Mono', monospace;
+    padding: .75rem 1.5rem;
+    border: 1px solid #a1d5ca;
+    color: #a1d5ca;
+    background-color: transparent;
+    font-size: .9rem;
+    border-radius: 3px;
+    letter-spacing: 3px;
+}
+
+#say-hello:hover {
+    cursor: pointer;
+    background-color: #a1d5ca10;
+    transition: all .4s;
+}
+
+/* FOOTER */
+footer {
+    display: none;
+    opacity: 0;
+    color: #a1d5ca;
+    font-family: 'Share Tech Mono', monospace;
+}
+
+footer.showSection {
+    display: flex;
+    opacity: 1;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 2rem auto;
+}
 
 /* KEEP AT BOTTOM OF SCRIPT */
 .unhide {
