@@ -813,9 +813,16 @@ li i {
     transition: all .4s;
     text-align: left;
     border-radius: 5px;
-    opacity: 0;
-    transform: translateY(50px);
     transition: all .5s;
+}
+
+.other-project:hover {
+    transform: translateY(-10px);
+    transition: all .5s;
+}
+
+/* .other.project.unhide {
+    opacity: 1;
 }
 
 .other-projects.unhide .other-project:first-of-type {
@@ -842,7 +849,7 @@ li i {
         transform: translateY(0);
         opacity: 1;
     }
-}
+} */
 
 .other-project:hover h4 {
     color: #a1d5ca;

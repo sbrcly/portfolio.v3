@@ -86,7 +86,6 @@ class CreatePage {
                 headerIntro.classList.remove('runAnimation');
             },1100);
         });
-
         myCompany.addEventListener('mouseover', () => {
             myCompany.firstElementChild.classList.add('removeOverlay');
         });
@@ -111,7 +110,7 @@ class CreatePage {
             }
             home.classList.add('showSection');
             window.scrollTo(0, section2.getBoundingClientRect().top);
-        }, 4750);
+        }, 5000);
     }
     createNav = () => {
         let linkNum = 1;
