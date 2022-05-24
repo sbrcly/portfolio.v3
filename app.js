@@ -52,7 +52,6 @@ const jobs = [
     'softwareDeveloper.',
     'programmer.',
     'developer.',
-    '<p>coder</p>.',
     'computer_programmer.',
     'computerProgrammer.',
     'web_developer.',
