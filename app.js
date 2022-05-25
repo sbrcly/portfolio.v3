@@ -63,7 +63,7 @@ const jobs = [
 
 
 // JOB ANIMATION
-setInterval(() => {
+const runJobAnimation = setInterval(() => {
     myJob.classList.remove('runJobAnim');
     let randomNum = Math.floor(Math.random() * jobs.length);
     myJob.setAttribute('data-text', jobs[randomNum]);
@@ -181,3 +181,4 @@ class CreatePage {
 }
 
 const page = new CreatePage(sectionLinks, pageSections);
+runJobAnimation();
