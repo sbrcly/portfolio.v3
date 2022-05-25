@@ -61,13 +61,14 @@ const jobs = [
     'webDeveloper.'
 ];
 
+
 // JOB ANIMATION
 setInterval(() => {
     myJob.classList.remove('runJobAnim');
-        let randomNum = Math.floor(Math.random() * jobs.length);
-        myJob.setAttribute('data-text', jobs[randomNum]);
-        myJob.innerText = jobs[randomNum];
-        myJob.classList.add('runJobAnim');
+    let randomNum = Math.floor(Math.random() * jobs.length);
+    myJob.setAttribute('data-text', jobs[randomNum]);
+    myJob.innerText = jobs[randomNum];
+    myJob.classList.add('runJobAnim');
 }, 5000);
 
 class CreatePage {
@@ -106,14 +107,7 @@ class CreatePage {
             })
         }
         this.createNav();
-        setTimeout(() => {
-            for (let section of this.pageSections) {
-                section.classList.add('showSection');
-            }
-            home.classList.add('showSection');
-            footer.classList.add('showSection');
-            window.scrollTo(0, section2.getBoundingClientRect().top);
-        }, 5000);
+        this.scrollOnLoad();
     }
     createNav = () => {
         let linkNum = 1;
@@ -142,6 +136,17 @@ class CreatePage {
                 });
             };
         });
+    }
+    scrollOnLoad = () => {
+        const scrollLoad = setTimeout(() => {
+            for (let section of this.pageSections) {
+                section.classList.add('showSection');
+            }
+            home.classList.add('showSection');
+            footer.classList.add('showSection');
+            window.scrollTo(0, section2.getBoundingClientRect().top);
+        }, 5000);
+        scrollLoad();
     }
     scrollActions = (e) => {
         if (header.getBoundingClientRect().top > this.lastScrollTop &&
