@@ -331,7 +331,7 @@ header.showSection {
     -webkit-text-stroke: 0px #f2efea60;
 }
 
-#myJob span::before {
+#myJob span.runJobAnim::before {
     top: 0;
     left: 0;
     width: 0;
@@ -342,12 +342,8 @@ header.showSection {
     content: attr(data-text);
     border-right: 2px solid #f2efea60;
     -webkit-text-stroke: 0vw #f2efea60;
-    animation: animate 4.99s linear infinite;
+    animation: animate 5s linear infinite;
 }
-
-/* #myJob span.runJobAnim::before {
-    
-} */
 
 @keyframes animate {
     0%,
