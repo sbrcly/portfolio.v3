@@ -266,9 +266,34 @@ ul {
     border: 3px solid #a1d5ca;;
 }
 
+#full-size-nav {
+    display: none;
+}
+
+#full-size-nav.showNavLinks {
+    display: block;
+}
+
+#hamburger-menu {
+    position: absolute;
+    top: 100%;
+    right: 5%;
+    display: none;
+}
+
+#hamburger-menu.showNavLinks {
+    display: flex;
+    flex-direction: column;
+}
+
 .nav-link {
     margin-left: 2rem;
     letter-spacing: 1px;
+}
+
+#hamburger-menu .nav-link {
+    margin-left: 0;
+    margin-bottom: 1rem;
 }
 
 .nav-link span {

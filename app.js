@@ -5,6 +5,8 @@ const initialBorder = document.querySelector('.loadAnimation');
 const mainNav = document.querySelector('#mainNav');
 const navRight = document.querySelector('.nav-right');
 const logo = document.querySelector('#logo');
+const hamburgerMenu = document.querySelector('#hamburger-menu');
+const fullSizeNav = document.querySelector('#full-size-nav');
 
 // HEADER SELECTORS
 const header = document.querySelector('header');
@@ -150,7 +152,7 @@ class CreatePage {
             }   else if (linkNum === 6) {
                 newNavLink.innerHTML = `<span>VI.</span> ${section}`;
             }
-            navRight.append(newNavLink);
+            fullSizeNav.append(newNavLink);
             linkNum++;
             if (newNavLink.innerHTML === `<span>I.</span> Home`) {
                 newNavLink.addEventListener('click', () => {
@@ -158,6 +160,59 @@ class CreatePage {
                 });
             };
         });
+
+        linkNum = 1;
+        this.sectionLinks.forEach(section => {
+            const newNavLink = document.createElement('a');
+            if (section !== 'Resume') {
+                newNavLink.setAttribute('href', `#${section}`);
+            }   else {
+                newNavLink.setAttribute('href', `/resume.PDF`);
+                newNavLink.setAttribute('target', '_blank');
+            }
+            newNavLink.classList.add('nav-link');
+            if (linkNum === 1) {
+                newNavLink.innerHTML = `<span>I.</span> ${section}`;
+            }   else if (linkNum === 2) {
+                newNavLink.innerHTML = `<span>II.</span> ${section}`;
+            }   else if (linkNum === 3) {
+                newNavLink.innerHTML = `<span>III.</span> ${section}`;
+            }   else if (linkNum === 4) {
+                newNavLink.innerHTML = `<span>IV.</span> ${section}`;
+            }   else if (linkNum === 5) {
+                newNavLink.innerHTML = `<span>V.</span> ${section}`;
+            }   else if (linkNum === 6) {
+                newNavLink.innerHTML = `<span>VI.</span> ${section}`;
+            }
+            hamburgerMenu.append(newNavLink);
+            linkNum++;
+            if (newNavLink.innerHTML === `<span>I.</span> Home`) {
+                newNavLink.addEventListener('click', () => {
+                    window.scrollTo(0,0);
+                });
+            };
+        });
+        this.showCorrectNav();
+    }
+    showCorrectNav = () => {
+        if (window.screen.availWidth > 900) {
+            fullSizeNav.classList.add('showNavLinks');
+            hamburgerMenu.classList.remove('showNavLinks');
+        }   else {
+            fullSizeNav.classList.remove('showNavLinks');
+            hamburgerMenu.classList.add('showNavLinks');
+        };
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 900) {
+                console.log('over 900');
+                fullSizeNav.classList.add('showNavLinks');
+                hamburgerMenu.classList.remove('showNavLinks');
+            }   else {
+                console.log('under 900');
+                fullSizeNav.classList.remove('showNavLinks');
+                hamburgerMenu.classList.add('showNavLinks');
+            };
+        })
     }
     scrollOnLoad = () => {
         const scrollLoad = setTimeout(() => {
@@ -183,7 +238,6 @@ class CreatePage {
         };
         this.lastScrollTop = header.getBoundingClientRect().top;
         if (window.screen.availWidth > 900) {
-            console.dir(window);
             for (let section of sections) {
                 if (section.getBoundingClientRect().top <= 600) {
                     section.classList.add('unhide');
