@@ -15,12 +15,13 @@ html {
     font-size: 16px;
     font-family: 'Montserrat', sans-serif;
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
     background-color: #485d76;
     color: #d8d0c5;
-    width: 100vw;
+    /* width: 100vw; */
     overflow-x: hidden;
     animation: backgroundLoad 5s ease-in-out forwards;
 }
@@ -74,6 +75,7 @@ ul {
     border-radius: 0;
     animation: borderLoad 4s .5s forwards;
     animation-timing-function: ease-in;
+    overflow-x: hidden;
 }
 
 #initials {
@@ -109,8 +111,29 @@ ul {
         border-radius: 0;
     }
     100% {
-        transform: translate(-50%, -50%) scaleX(2);
-        border: 45vh solid #a1d5ca;
+        transform: translate(-50%, -50%) scaleX(0);
+        border: 0px solid #a1d5ca;
+        opacity: 0;
+        border-radius: 50%;
+    }
+}
+
+@keyframes borderLoadSmall {
+    0% {
+        opacity: 0;
+        border: 0px solid #a1d5ca;
+        border-radius: 0;
+    }
+    25% {
+        opacity: 1;
+        border: 17px solid #a1d5ca;
+        border-radius: 0;
+    }
+    90% {
+        border: 17px solid #a1d5ca;
+        border-radius: 0;
+    }
+    100% {
         opacity: 0;
         border-radius: 50%;
     }
@@ -1064,6 +1087,15 @@ footer.showSection {
     }
     header {
         width: 80vw;
+    }
+    #headerIntro {
+        font-size: 1rem;
+    }
+    #myName {
+        font-size: 3rem;
+    }   
+    #myJob {
+        font-size: 3rem;
     }
     .other-project {
         width: 300px;

@@ -1,3 +1,6 @@
+// LOAD SELECTORS
+const initialBorder = document.querySelector('.loadAnimation');
+
 // NAV SELECTORS
 const mainNav = document.querySelector('#mainNav');
 const navRight = document.querySelector('.nav-right');
@@ -62,11 +65,19 @@ const jobs = [
 ];
 
 
+// LOAD ANIMATION
+if (window.screen.availWidth > 900) {
+    initialBorder.style.animation = 'borderLoad 4s .5s forwards;'
+}   else {
+    initialBorder.style.animation = 'borderLoadSmall 4s .5s forwards;'
+};
+
 // JOB ANIMATION
 const runJobAnimation = setInterval(() => {
     myJob.classList.remove('runJobAnim');
     myJob.classList.remove('animationStopped');
-    if (window.innerWidth > 1225) {
+    if (window.screen.availWidth > 1225) {
+        // console.log(window.innerWidth);
         let randomNum = Math.floor(Math.random() * jobs.length);
         myJob.setAttribute('data-text', jobs[randomNum]);
         myJob.innerText = jobs[randomNum];
@@ -171,22 +182,31 @@ class CreatePage {
             mainNav.classList.remove('hideNav');
         };
         this.lastScrollTop = header.getBoundingClientRect().top;
-
-        for (let section of sections) {
-            if (section.getBoundingClientRect().top <= 600) {
+        if (window.screen.availWidth > 900) {
+            console.dir(window);
+            for (let section of sections) {
+                if (section.getBoundingClientRect().top <= 600) {
+                    section.classList.add('unhide');
+                }   else {
+                    section.classList.remove('unhide');
+                };
+            };
+    
+            for (let project of projects) {
+                if (project.getBoundingClientRect().top <= 600) {
+                    project.classList.add('unhide');
+                }   else {
+                    project.classList.remove('unhide');
+                };
+            }
+        }   else {
+            for (let section of sections) {
                 section.classList.add('unhide');
-            }   else {
-                section.classList.remove('unhide');
+            };
+            for (let project of projects) {
+                project.classList.add('unhide');
             };
         };
-
-        for (let project of projects) {
-            if (project.getBoundingClientRect().top <= 600) {
-                project.classList.add('unhide');
-            }   else {
-                project.classList.remove('unhide');
-            };
-        }
     }
 }
 
