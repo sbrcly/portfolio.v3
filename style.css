@@ -1010,12 +1010,11 @@ footer.showSection {
     }
     .project-1,
     .project-3 {
-        flex-direction: column;
+        flex-direction: column-reverse;
         align-items: center;
     }
     .project-1-right,
     .project-3-right {
-        margin-top: 3rem;
         flex-direction: column;
         align-items: center;
         width: 100%;
@@ -1033,11 +1032,10 @@ footer.showSection {
     }
     .project-2 {
         display: flex;
-        flex-direction: column-reverse;
+        flex-direction: column;
         align-items: center;
     }
     .project-2-left {
-        margin-top: 3rem;
         display: flex;
         flex-direction: column;
         align-items: center;
