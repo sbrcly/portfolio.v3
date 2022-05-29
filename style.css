@@ -431,7 +431,7 @@ header.showSection {
 .section {
     position: relative;
     display: none;
-    max-width: 65vw;
+    max-width: 75vw;
     margin: 25vh auto;
     padding-top: 10vh;
     opacity: 0;
@@ -620,6 +620,8 @@ li i {
 .project-1-right h3,
 .project-3-right h3 {
     font-size: 1.5rem;
+    text-align: right;
+    padding-left: .5rem;
 }
 
 .project-1-right h3 span,
@@ -734,6 +736,7 @@ li i {
 
 .project-2-left h3 {
     font-size: 1.5rem;
+    text-align: left;
 }
 
 .project-2-left h3 span {
@@ -800,8 +803,8 @@ li i {
 }
 
 .other-project {
-    width: 20vw;
-    height: 40vh;
+    width: 300px;
+    height: 350px;
     background-color: #344b65;
     color: #d8d0c5;
     padding: 1rem 2rem;
@@ -992,5 +995,55 @@ footer.showSection {
         margin-left: .5rem;
         width: 700px;
         height: auto;
+    }
+}
+
+@media screen and (max-width: 1225px){
+    .section-1-right img {
+        display: none;
+    }
+    .project-1,
+    .project-3 {
+        flex-direction: column;
+        align-items: center;
+    }
+    .project-1-right,
+    .project-3-right {
+        margin-top: 3rem;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .project-1-left,
+    .project-3-left {
+        position: relative;
+        width: 100%;
+        border-radius: 5px;
+    }
+    .project-1 .project-description,
+    .project-3 .project-description {
+        width: 100%;
+        text-align: center;
+    }
+    .project-2 {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .project-2-left {
+        margin-top: 3rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .project-2-right {
+        position: relative;
+        width: 100%;
+        border-radius: 5px;
+    }
+    .project-2 .project-description {
+        width: 100%;
+        text-align: center;
     }
 }

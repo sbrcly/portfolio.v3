@@ -151,7 +151,6 @@ class CreatePage {
             footer.classList.add('showSection');
             window.scrollTo(0, section2.getBoundingClientRect().top);
         }, 5000);
-        scrollLoad();
     }
     scrollActions = (e) => {
         if (header.getBoundingClientRect().top > this.lastScrollTop &&
@@ -186,4 +185,3 @@ class CreatePage {
 }
 
 const page = new CreatePage(sectionLinks, pageSections);
-runJobAnimation();
