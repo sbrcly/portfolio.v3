@@ -65,10 +65,16 @@ const jobs = [
 // JOB ANIMATION
 const runJobAnimation = setInterval(() => {
     myJob.classList.remove('runJobAnim');
-    let randomNum = Math.floor(Math.random() * jobs.length);
-    myJob.setAttribute('data-text', jobs[randomNum]);
-    myJob.innerText = jobs[randomNum];
-    myJob.classList.add('runJobAnim');
+    myJob.classList.remove('animationStopped');
+    if (window.innerWidth > 1225) {
+        let randomNum = Math.floor(Math.random() * jobs.length);
+        myJob.setAttribute('data-text', jobs[randomNum]);
+        myJob.innerText = jobs[randomNum];
+        myJob.classList.add('runJobAnim');
+    }   else {
+        myJob.classList.add('animationStopped');
+    }
+    
 }, 5000);
 
 class CreatePage {

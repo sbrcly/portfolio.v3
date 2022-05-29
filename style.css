@@ -345,6 +345,12 @@ header.showSection {
     animation: animate 5s linear infinite;
 }
 
+#myJob span.animationStopped {
+    color: #f2efea60;
+    width: 100%;
+    overflow: visible;
+}
+
 @keyframes animate {
     0%,
     10%,
