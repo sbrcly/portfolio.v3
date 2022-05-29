@@ -819,7 +819,6 @@ li i {
     transition: all .4s;
     text-align: left;
     border-radius: 5px;
- 
     transition: all .5s;
 }
 
@@ -1001,6 +1000,10 @@ footer.showSection {
         margin-left: .5rem;
         width: 700px;
         height: auto;
+    }
+    .other-project {
+        width: 400px;
+        height: 450px;
     }
 }
 
