@@ -1053,3 +1053,20 @@ footer.showSection {
         text-align: center;
     }
 }
+
+@media screen and (max-width: 901px){
+    html {
+        font-size: 12px;
+    }
+    .links-right,
+    .links-left {
+        display: none;
+    }
+    header {
+        width: 80vw;
+    }
+    .other-project {
+        width: 300px;
+        height: 300px;
+    }
+}
