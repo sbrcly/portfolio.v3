@@ -300,10 +300,6 @@ ul {
     cursor: pointer;
 }
 
-.burger:hover .line {
-    border-top: 1px solid #a1d5ca;
-}
-
 .burger:hover .line-1 {
     margin-left: 75%;
     transition: all .4s;
@@ -316,7 +312,7 @@ ul {
 
 .line {
     height: 33.33333%;
-    border-top: 1px solid #fff;
+    border-top: 2px solid #a1d5ca;
 }
 
 .line-1 {
@@ -1044,10 +1040,15 @@ footer {
 
 footer.showSection {
     display: flex;
+    flex-direction: column;
     opacity: 1;
-    align-items: flex-start;
-    justify-content: center;
+    align-items: center;
+    justify-content: flex-start;
     margin: 2rem auto;
+}
+
+.footer-links {
+    display: none;
 }
 
 /* KEEP AT BOTTOM OF SCRIPT */
@@ -1164,17 +1165,23 @@ footer.showSection {
 
 @media screen and (max-width: 901px){
     html {
-        font-size: 12px;
+        font-size: 14px;
     }
     .links-right,
     .links-left {
         display: none;
     }
+    #mainNav {
+        padding: 1.5rem 2rem;
+    }
+    #logo {
+        font-size: 1.5rem;
+    }
     header {
-        width: 80vw;
+        width: 85vw;
     }
     #headerIntro {
-        font-size: 1rem;
+        font-size: 1.25rem;
     }
     #myName {
         font-size: 3rem;
@@ -1182,8 +1189,139 @@ footer.showSection {
     #myJob {
         font-size: 3rem;
     }
+    #jobDescription {
+        max-width: 100%;
+        margin: 1rem 0 3rem 0;
+    }
+    #headerBtn {
+        padding: .75rem 1.5rem;
+        font-size: 1rem;
+    }
+    .section {
+        max-width: 85vw;
+        margin: 10vh auto;
+    }
+    #about-me span,
+    #my-work span {
+        margin-right: 0;
+    }
+    #section-1-heading,
+    #section-2-heading {
+        margin-bottom: 3rem;
+    }
+    #section-1-heading .line {
+        margin-left: 1rem;
+        height: 1px;
+        width: 50%;
+        border-bottom: 1px solid #d8d0c527;
+    }
+    .project-1,
+    .project-2,
+    .project-3 {
+        position: relative;
+        margin: 1rem 0;
+        padding: 1rem;
+        background-color: #344b6593;
+        box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+        border-radius: 3px;
+    }
+    .project-1-right,
+    .project-2-left,
+    .project-3-right {
+        align-items: flex-start;
+    }
+    .project-1-right h3,
+    .project-2-left h3,
+    .project-3-right h3 {
+        text-align: left;
+        padding: 0;
+    }
+    .project-2-left h3 {
+        text-align: left;
+    }
+    .project-1 .project-description,
+    .project-2 .project-description,
+    .project-3 .project-description {
+        width: 100%;
+        padding: 1rem;
+        color: #d8d0c5;
+        background-color: transparent;
+        box-shadow: none;
+        text-align: left;
+        padding-left: 0;
+    }
+    .tools-used p {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+    .tools-used p span {
+        margin-left: 0;
+        margin-right: 2rem;
+        margin-bottom: .5rem;
+    }
+    .project-links {
+        display: flex;
+        width: 100%;
+        justify-content: flex-start;
+    }
+    .project-links a i {
+        font-size: 1.5rem;
+        margin: 1rem 2rem 1rem 0;
+    }
+    .project-links i {
+        font-size: 1.5rem;
+        margin: 1rem 2rem 1rem 0;
+    }
+    .project-1-left .image-backlay,
+    .project-2-right .image-backlay,
+    .project-3-left .image-backlay {
+        display: none;
+    }
+    .project-1-left,
+    .project-3-left,
+    .project-2-right {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        opacity: .5;
+    }
     .other-project {
         width: 300px;
         height: 300px;
+        margin: 3rem auto 0 auto;
+    }
+    .other-project-blurb:last-of-type {
+        margin-bottom: 1rem;
+    }
+    .other-project-header a {
+        font-size: 1.75rem;
+    } 
+    .other-project-body h4 {
+        font-size: 1.45rem;
+        padding-bottom: 1rem;
+    }
+    .other-project-body p {
+        font-size: 1rem;
+    }
+    .other-project-tech p span {
+        font-size: .9rem;
+        margin-right: .75rem;
+        color: #d8d0c5;
+        font-family: 'Share Tech Mono', monospace;
+    }
+    #Contact {
+        padding-top: 3rem;
+    }
+    .footer-links {
+        display: flex;
+    }
+    .footer-links a {
+        margin: 1rem;
+        font-size: 1.5rem;
     }
 }

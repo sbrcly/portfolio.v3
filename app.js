@@ -205,19 +205,23 @@ class CreatePage {
         if (window.innerWidth > 900) {
             fullSizeNav.classList.add('showNavLinks');
             hamburgerMenu.classList.remove('showNavLinks');
+            burger.style.display = 'none';
         }   else {
             fullSizeNav.classList.remove('showNavLinks');
             hamburgerMenu.classList.add('showNavLinks');
+            burger.style.display = 'block';
         };
         window.addEventListener('resize', () => {
             if (window.innerWidth > 900) {
                 console.log('over 900');
                 fullSizeNav.classList.add('showNavLinks');
                 hamburgerMenu.classList.remove('showNavLinks');
+                burger.style.display = 'none';
             }   else {
                 console.log('under 900');
                 fullSizeNav.classList.remove('showNavLinks');
                 hamburgerMenu.classList.add('showNavLinks');
+                burger.style.display = 'block';
             };
         })
     }
