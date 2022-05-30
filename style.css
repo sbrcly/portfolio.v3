@@ -1254,7 +1254,7 @@ footer.showSection {
         position: relative;
         margin: 1rem 0;
         padding: 1rem;
-        background-color: #344b6593;
+        /* background-color: #344b6593; */
         box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
         border-radius: 3px;
     }
@@ -1321,7 +1321,7 @@ footer.showSection {
         width: 100%;
         height: 100%;
         z-index: -1;
-        opacity: .5;
+        opacity: .25;
     }
     .other-project {
         width: 300px;
