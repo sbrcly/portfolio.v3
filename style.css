@@ -1350,6 +1350,9 @@ footer.showSection {
     #Contact {
         padding-top: 3rem;
     }
+    #Contact p:last-of-type {
+        max-width: 90%;
+    }
     .footer-links {
         display: flex;
     }
