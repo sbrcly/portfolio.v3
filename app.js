@@ -251,7 +251,7 @@ class CreatePage {
             mainNav.classList.remove('hideNav');
         };
         this.lastScrollTop = header.getBoundingClientRect().top;
-        if (window.screen.availWidth > 900) {
+        // if (window.screen.availWidth > 900) {
             for (let section of sections) {
                 if (section.getBoundingClientRect().top <= 600) {
                     section.classList.add('unhide');
@@ -267,14 +267,14 @@ class CreatePage {
                     project.classList.remove('unhide');
                 };
             }
-        }   else {
-            for (let section of sections) {
-                section.classList.add('unhide');
-            };
-            for (let project of projects) {
-                project.classList.add('unhide');
-            };
-        };
+        // }   else {
+        //     for (let section of sections) {
+        //         section.classList.add('unhide');
+        //     };
+        //     for (let project of projects) {
+        //         project.classList.add('unhide');
+        //     };
+        // };
     }
 }
 
