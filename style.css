@@ -24,6 +24,13 @@ body {
     /* width: 100vw; */
     overflow-x: hidden;
     animation: backgroundLoad 5s ease-in-out forwards;
+    transition: all .5s;
+}
+
+body.showHamburgerMenu #home,
+body.showHamburgerMenu .section,
+body.showHamburgerMenu footer {
+    filter: blur(2px);
 }
 
 /* SCROLLBAR RESET */
@@ -267,7 +274,7 @@ ul {
 }
 
 .nav-right {
-    position: relative;
+    /* position: relative; */
     height: 100%;
 }
 
@@ -289,6 +296,7 @@ ul {
 #hamburger-menu.showNavLinks {
     display: flex;
     flex-direction: column;
+    z-index: -1;
 }
 
 .burger {
@@ -296,23 +304,20 @@ ul {
     height: 25px;
 }
 
-.burger:hover {
-    cursor: pointer;
-}
-
-.burger:hover .line-1 {
+.burger.showBurgerLinks .line-1 {
     margin-left: 75%;
-    transition: all .4s;
+    transition: all .5s;
 }
 
-.burger:hover .line-3 {
+.burger.showBurgerLinks .line-3 {
     margin-left: 65%;
-    transition: all .4s;
+    transition: all .5s;
 }
 
 .line {
     height: 33.33333%;
     border-top: 2px solid #a1d5ca;
+    transition: all .5s;
 }
 
 .line-1 {
@@ -332,18 +337,46 @@ ul {
     letter-spacing: 1px;
 }
 
-#hamburger-menu .nav-link {
-    margin: 1rem 0;
-    opacity: 0;
+#hamburger-menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 75vw;
+    height: 100vh;
+    background-color: #344b65;
     visibility: hidden;
+    opacity: 0;
+    transform: translateX(70vw);
     transition: all .5s;
 }
 
-#hamburger-menu .nav-link.showBurgerLink {
+#hamburger-menu a {
+    font-size: 1.1rem;
+    margin: 1rem 0;
+    filter: blur(0);
+}
+
+#hamburger-menu.showBurgerLinks {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(0);
+    transition: all .5s;
+}
+
+#hamburger-menu .nav-link {
+    margin: 1rem 0;
+    transition: all .5s;
+}
+
+/* #hamburger-menu.showBurgerLink .nav-link {
     opacity: 1;
     visibility: visible;
     transition: all .5s;
-}
+} */
 
 .nav-link span {
     font-family: 'Share Tech Mono', monospace;

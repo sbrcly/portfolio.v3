@@ -1,6 +1,8 @@
 // LOAD SELECTORS
 const initialBorder = document.querySelector('.loadAnimation');
 
+// BODY
+const body = document.querySelector('body');
 // NAV SELECTORS
 const mainNav = document.querySelector('#mainNav');
 const navRight = document.querySelector('.nav-right');
@@ -130,10 +132,17 @@ class CreatePage {
         this.scrollOnLoad();
         this.burgerLinks = document.querySelectorAll('#hamburger-menu .nav-link')
         burger.addEventListener('click', () => {
-            for (let link of this.burgerLinks) {
-                link.classList.toggle('showBurgerLink');
-            }
-        })
+                hamburgerMenu.classList.toggle('showBurgerLinks');
+                burger.classList.toggle('showBurgerLinks');
+                body.classList.toggle('showHamburgerMenu');
+        });
+        for (let link of this.burgerLinks) {
+            link.addEventListener('click', () => {
+                hamburgerMenu.classList.remove('showBurgerLinks');
+                burger.classList.remove('showBurgerLinks');
+                body.classList.remove('showHamburgerMenu');
+            })
+        }
     }
     createNav = () => {
         let linkNum = 1;
@@ -242,9 +251,9 @@ class CreatePage {
             mainNav.classList.add('navShadow');
         }   else if (header.getBoundingClientRect().top <= logo.getBoundingClientRect().top) {
             mainNav.classList.add('hideNav');
-            for (let link of this.burgerLinks) {
-                link.classList.remove('showBurgerLink');
-            }
+            hamburgerMenu.classList.remove('showBurgerLinks');
+            burger.classList.remove('showBurgerLinks');
+            body.classList.remove('showHamburgerMenu');
         };
         if (header.getBoundingClientRect().top >= this.originalPosition) {
             mainNav.classList.remove('navShadow');
