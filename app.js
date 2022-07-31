@@ -1,5 +1,9 @@
 // LOAD SELECTORS
-const initialBorder = document.querySelector('.loadAnimation');
+const initials = document.querySelector('#initials');
+
+setTimeout(() => {
+    initials.style.display = 'none';
+}, 4000);
 
 // BODY
 const body = document.querySelector('body');
@@ -68,14 +72,6 @@ const jobs = [
     'web_developer.',
     'webDeveloper.'
 ];
-
-
-// LOAD ANIMATION
-if (window.screen.availWidth > 900) {
-    initialBorder.style.animation = 'borderLoad 4s .5s forwards;'
-}   else {
-    initialBorder.style.animation = 'borderLoadSmall 4s .5s forwards;'
-};
 
 // JOB ANIMATION
 const runJobAnimation = setInterval(() => {
@@ -242,7 +238,7 @@ class CreatePage {
             home.classList.add('showSection');
             footer.classList.add('showSection');
             window.scrollTo(0, section2.getBoundingClientRect().top);
-        }, 5000);
+        }, 4000);
     }
     scrollActions = (e) => {
         if (header.getBoundingClientRect().top > this.lastScrollTop &&
