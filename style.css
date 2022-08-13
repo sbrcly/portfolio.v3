@@ -381,12 +381,6 @@ ul {
     transition: all .5s;
 }
 
-/* #hamburger-menu.showBurgerLink .nav-link {
-    opacity: 1;
-    visibility: visible;
-    transition: all .5s;
-} */
-
 .nav-link span {
     font-family: 'Share Tech Mono', monospace;
     color: #fff;
@@ -745,26 +739,6 @@ li i {
     z-index: -1;
 }
 
-.project-1-left .image-backlay.animateBg,
-.project-3-left .image-backlay.animateBg {
-    animation: animateBg .2s linear forwards;
-}
-
-@keyframes animateBg {
-    0% {
-        border: 2px solid #fff;
-    }
-    25% {
-        border: 2px solid #344b65;
-    }
-    50% {
-        border: 2px solid #fff;
-    }
-    100% {
-        border: 2px solid #344b65;
-    }
-}
-
 .project-1-left .image-overlay,
 .project-3-left .image-overlay {
     position: absolute;
@@ -778,11 +752,6 @@ li i {
 
 .project-3-left .image-overlay {
     background-color: #888888cc;
-}
-
-.project-1-left .image-overlay:hover,
-.project-3-left .image-overlay:hover {
-    animation: imgHover .2s linear forwards;
 }
 
 .project-1-right,
@@ -936,9 +905,9 @@ li i {
     border-radius: 3px;
 }
 
-.project-2-right .image-overlay:hover {
+/* .project-2-right .image-overlay:hover {
     animation: imgHover .2s linear forwards;
-}
+} */
 
 .project-2-left {
     padding: 1rem 0;
@@ -973,21 +942,6 @@ li i {
     box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
     border-radius: 3px;
     z-index: 9;
-}
-
-@keyframes imgHover {
-    0% {
-        background-color: #ffffff90;
-    }
-    25% {
-        background-color: #344b6590;
-    }
-    50% {
-        background-color: #ffffff90;
-    }
-    100% {
-        background-color: #344b6590;
-    } 
 }
 
 /* OTHER PROJECTS */

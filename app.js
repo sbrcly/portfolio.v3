@@ -116,14 +116,6 @@ class CreatePage {
         window.addEventListener('scroll', (e) => {
             this.scrollActions(e);
         });
-        for (let img of imgOverlay) {
-            img.addEventListener('mouseover', () => {
-                img.parentElement.firstElementChild.classList.add('animateBg');
-            });
-            img.addEventListener('mouseout', () => {
-                img.parentElement.firstElementChild.classList.remove('animateBg');
-            })
-        }
         this.createNav();
         this.scrollOnLoad();
         this.burgerLinks = document.querySelectorAll('#hamburger-menu .nav-link')
