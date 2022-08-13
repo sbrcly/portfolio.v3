@@ -598,6 +598,10 @@ header.showSection {
     align-items: center;
 }
 
+#About {
+    margin-top: 0;
+}
+
 #about-me span,
 #my-work span {
     color: #fff;
@@ -1329,7 +1333,7 @@ footer.showSection {
     .project-2,
     .project-3 {
         position: relative;
-        margin: 1rem 0;
+        margin: 1rem 0 3rem 0;
         padding: 1rem;
         box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
         border-radius: 3px;
