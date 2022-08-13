@@ -3,7 +3,7 @@ const initials = document.querySelector('#initials');
 
 setTimeout(() => {
     initials.style.display = 'none';
-}, 4000);
+}, 2500);
 
 // BODY
 const body = document.querySelector('body');
@@ -230,7 +230,7 @@ class CreatePage {
             home.classList.add('showSection');
             footer.classList.add('showSection');
             window.scrollTo(0, section2.getBoundingClientRect().top);
-        }, 4000);
+        }, 2500);
     }
     scrollActions = (e) => {
         if (header.getBoundingClientRect().top > this.lastScrollTop &&

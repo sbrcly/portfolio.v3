@@ -19,7 +19,7 @@ html {
 }
 
 body {
-    background-color: #485d76;
+    background-color: #1b2937;
     color: #d8d0c5;
     /* width: 100vw; */
     overflow-x: hidden;
@@ -201,7 +201,7 @@ ul {
     flex-direction: column;
     align-items: center;
     opacity: 0;
-    animation: contentLoad 2s ease-in-out 4s forwards;
+    animation: contentLoad 2s ease-in-out 2.5s forwards;
 }
 
 .static-link {
@@ -224,7 +224,7 @@ ul {
     flex-direction: column;
     align-items: center;
     opacity: 0;
-    animation: contentLoad 2s ease-in-out 4s forwards;
+    animation: contentLoad 2s ease-in-out 2.5s forwards;
 }
 
 .links-right .static-link {
@@ -262,7 +262,7 @@ ul {
     align-items: center;
     padding: 1.5rem 3rem;
     opacity: 0;
-    animation: contentLoad 2s ease-in-out 4s forwards;
+    animation: contentLoad 2s ease-in-out 2.5s forwards;
     transition: all .5s;
     z-index: 99;
 }
@@ -356,7 +356,7 @@ ul {
     align-items: center;
     width: 75vw;
     height: 100vh;
-    background-color: #344b65;
+    background-color: #1b2937;
     visibility: hidden;
     opacity: 0;
     transform: translateX(70vw);
@@ -905,10 +905,6 @@ li i {
     border-radius: 3px;
 }
 
-/* .project-2-right .image-overlay:hover {
-    animation: imgHover .2s linear forwards;
-} */
-
 .project-2-left {
     padding: 1rem 0;
     display: flex;
@@ -1292,6 +1288,9 @@ footer.showSection {
     #myJob {
         font-size: 3rem;
     }
+    #myJob span {
+        animation: none;
+    }
     #jobDescription {
         max-width: 100%;
         margin: 1rem 0 3rem 0;
@@ -1307,6 +1306,7 @@ footer.showSection {
     #about-me span,
     #my-work span {
         margin-right: 0;
+        animation: none;
     }
     #section-1-heading,
     #section-2-heading {
@@ -1318,13 +1318,19 @@ footer.showSection {
         width: 50%;
         border-bottom: 1px solid #d8d0c527;
     }
+        .section-1-left div:last-of-type {
+            max-width: 100%;
+            margin: auto;
+        }
+    .tools-used p span {
+        animation: none;
+    }
     .project-1,
     .project-2,
     .project-3 {
         position: relative;
         margin: 1rem 0;
         padding: 1rem;
-        /* background-color: #344b6593; */
         box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
         border-radius: 3px;
     }
@@ -1422,6 +1428,9 @@ footer.showSection {
     }
     #Contact p:last-of-type {
         max-width: 90%;
+    }
+    footer {
+        animation: none;
     }
     .footer-links {
         display: flex;
