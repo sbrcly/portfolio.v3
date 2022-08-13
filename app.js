@@ -210,12 +210,10 @@ class CreatePage {
         };
         window.addEventListener('resize', () => {
             if (window.innerWidth > 900) {
-                console.log('over 900');
                 fullSizeNav.classList.add('showNavLinks');
                 hamburgerMenu.classList.remove('showNavLinks');
                 burger.style.display = 'none';
             }   else {
-                console.log('under 900');
                 fullSizeNav.classList.remove('showNavLinks');
                 hamburgerMenu.classList.add('showNavLinks');
                 burger.style.display = 'block';
@@ -248,30 +246,37 @@ class CreatePage {
             mainNav.classList.remove('hideNav');
         };
         this.lastScrollTop = header.getBoundingClientRect().top;
-        // if (window.screen.availWidth > 900) {
-            for (let section of sections) {
+        for (let section of sections) {
+            if (window.innerWidth > 2000) {
+                if (section.getBoundingClientRect().top <= 1000) {
+                    section.classList.add('unhide');
+                }   else {
+                    section.classList.remove('unhide');
+                };
+            }   else {
                 if (section.getBoundingClientRect().top <= 600) {
                     section.classList.add('unhide');
                 }   else {
                     section.classList.remove('unhide');
                 };
-            };
-    
-            for (let project of projects) {
-                if (project.getBoundingClientRect().top <= 600) {
+            }
+        };
+
+        for (let project of projects) {
+            if (window.innerWidth > 2000) {
+                if (project.getBoundingClientRect().top <= 1200) {
+                    project.classList.add('unhide');
+                }   else {
+                    project.classList.remove('unhide');
+                };
+            }   else {
+                if (project.getBoundingClientRect().top <= 750) {
                     project.classList.add('unhide');
                 }   else {
                     project.classList.remove('unhide');
                 };
             }
-        // }   else {
-        //     for (let section of sections) {
-        //         section.classList.add('unhide');
-        //     };
-        //     for (let project of projects) {
-        //         project.classList.add('unhide');
-        //     };
-        // };
+        };
     }
 }
 
