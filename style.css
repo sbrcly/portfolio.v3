@@ -1322,10 +1322,13 @@ footer.showSection {
         width: 40%;
         border-bottom: 1px solid #d8d0c527;
     }
-        .section-1-left div:last-of-type {
-            max-width: 100%;
-            margin: auto;
-        }
+    .section-1-left div:last-of-type {
+        max-width: 100%;
+        margin: auto;
+    }
+    ul li {
+        font-size: 12px;
+    }
     .tools-used p span {
         animation: none;
     }
