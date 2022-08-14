@@ -26,6 +26,11 @@ const sections = document.querySelectorAll('.section');
 
 // SECTION 1 SELECTORS
 const section1 = document.querySelector('#About');
+const skills1 = document.querySelector('#skills-list-1');
+const skills2 = document.querySelector('#skills-list-2');
+const skills3 = document.querySelector('#skills-list-3');
+
+const skills = ['JavaScript', 'Node.js', 'Python', 'HTML & CSS', 'MySQL', 'BigQuery', 'Looker', 'GCP', 'React', 'Bootstrap', 'Express', 'Socket.io'];
 
 // SECTION 2 SELECTORS
 const section2 = document.querySelector('#Projects');
@@ -78,7 +83,6 @@ const runJobAnimation = setInterval(() => {
     myJob.classList.remove('runJobAnim');
     myJob.classList.remove('animationStopped');
     if (window.screen.availWidth > 1225) {
-        // console.log(window.innerWidth);
         let randomNum = Math.floor(Math.random() * jobs.length);
         myJob.setAttribute('data-text', jobs[randomNum]);
         myJob.innerText = jobs[randomNum];
@@ -97,40 +101,10 @@ class CreatePage {
 
         this.originalPosition = header.getBoundingClientRect().top;
 
-        headerIntro.addEventListener('click', () => {
-            headerIntro.classList.add('runAnimation');
-            setTimeout(() => {
-                let randomNum = Math.floor(Math.random() * introductions.length);
-                headerIntro.innerText = introductions[randomNum];
-            },510);
-            setTimeout(() => {
-                headerIntro.classList.remove('runAnimation');
-            },1100);
-        });
-        myCompany.addEventListener('mouseover', () => {
-            myCompany.firstElementChild.classList.add('removeOverlay');
-        });
-        myCompany.addEventListener('mouseout', () => {
-            myCompany.firstElementChild.classList.remove('removeOverlay');
-        });
-        window.addEventListener('scroll', (e) => {
-            this.scrollActions(e);
-        });
         this.createNav();
         this.scrollOnLoad();
-        this.burgerLinks = document.querySelectorAll('#hamburger-menu .nav-link')
-        burger.addEventListener('click', () => {
-                hamburgerMenu.classList.toggle('showBurgerLinks');
-                burger.classList.toggle('showBurgerLinks');
-                body.classList.toggle('showHamburgerMenu');
-        });
-        for (let link of this.burgerLinks) {
-            link.addEventListener('click', () => {
-                hamburgerMenu.classList.remove('showBurgerLinks');
-                burger.classList.remove('showBurgerLinks');
-                body.classList.remove('showHamburgerMenu');
-            })
-        }
+        this.createListeners();
+        this.appendSkills();
     }
     createNav = () => {
         let linkNum = 1;
@@ -141,7 +115,7 @@ class CreatePage {
             }   else {
                 newNavLink.setAttribute('href', `/resume.PDF`);
                 newNavLink.setAttribute('target', '_blank');
-            }
+            };
             newNavLink.classList.add('nav-link');
             if (linkNum === 1) {
                 newNavLink.innerHTML = `<span>I.</span> ${section}`;
@@ -155,7 +129,7 @@ class CreatePage {
                 newNavLink.innerHTML = `<span>V.</span> ${section}`;
             }   else if (linkNum === 6) {
                 newNavLink.innerHTML = `<span>VI.</span> ${section}`;
-            }
+            };
             fullSizeNav.append(newNavLink);
             linkNum++;
             if (newNavLink.innerHTML === `<span>I.</span> Home`) {
@@ -173,7 +147,7 @@ class CreatePage {
             }   else {
                 newNavLink.setAttribute('href', `/resume.PDF`);
                 newNavLink.setAttribute('target', '_blank');
-            }
+            };
             newNavLink.classList.add('nav-link');
             if (linkNum === 1) {
                 newNavLink.innerHTML = `<span>I.</span> ${section}`;
@@ -187,7 +161,7 @@ class CreatePage {
                 newNavLink.innerHTML = `<span>V.</span> ${section}`;
             }   else if (linkNum === 6) {
                 newNavLink.innerHTML = `<span>VI.</span> ${section}`;
-            }
+            };
             hamburgerMenu.append(newNavLink);
             linkNum++;
             if (newNavLink.innerHTML === `<span>I.</span> Home`) {
@@ -229,6 +203,53 @@ class CreatePage {
             footer.classList.add('showSection');
             window.scrollTo(0, section2.getBoundingClientRect().top);
         }, 2500);
+    }
+    createListeners = () => {
+        headerIntro.addEventListener('click', () => {
+            headerIntro.classList.add('runAnimation');
+            setTimeout(() => {
+                let randomNum = Math.floor(Math.random() * introductions.length);
+                headerIntro.innerText = introductions[randomNum];
+            },510);
+            setTimeout(() => {
+                headerIntro.classList.remove('runAnimation');
+            },1100);
+        });
+        myCompany.addEventListener('mouseover', () => {
+            myCompany.firstElementChild.classList.add('removeOverlay');
+        });
+        myCompany.addEventListener('mouseout', () => {
+            myCompany.firstElementChild.classList.remove('removeOverlay');
+        });
+        window.addEventListener('scroll', (e) => {
+            this.scrollActions(e);
+        });
+        this.burgerLinks = document.querySelectorAll('#hamburger-menu .nav-link');
+        burger.addEventListener('click', () => {
+                hamburgerMenu.classList.toggle('showBurgerLinks');
+                burger.classList.toggle('showBurgerLinks');
+                body.classList.toggle('showHamburgerMenu');
+        });
+        for (let link of this.burgerLinks) {
+            link.addEventListener('click', () => {
+                hamburgerMenu.classList.remove('showBurgerLinks');
+                burger.classList.remove('showBurgerLinks');
+                body.classList.remove('showHamburgerMenu');
+            })
+        };
+    }
+    appendSkills = () => {
+        for (let i = 0; i < skills.length; i++) {
+            const newSkill = document.createElement('li');
+            newSkill.innerHTML = `<i class="fa-solid fa-angle-right"></i>${skills[i]}`;
+            if (i <= 3) {
+                skills1.append(newSkill);
+            }   else if (i <= 7) {
+                skills2.append(newSkill);
+            }   else {
+                skills3.append(newSkill);
+            };
+        };
     }
     scrollActions = (e) => {
         if (header.getBoundingClientRect().top > this.lastScrollTop &&
