@@ -37,6 +37,16 @@ const section2 = document.querySelector('#Projects');
 
 const mainProjects = [
     {
+        name: 'Betting Odds Table',
+        gh_link: 'https://github.com/sbrcly/Odds-Display-Public',
+        img: '/odds_table.jpg',
+        alt: 'Photo of Betting Odds Table Project',
+        pub_priv: '(Private)',
+        description: 'A sports trading tool that displays second by second odds from an assortment of books on a variety of markets and sports.',
+        skills_used: ['JavaScript', 'Node.js', 'Express', 'Socket.io', 'MySQL', 'GCP', 'BigQuery'],
+        disabled: true
+    },
+    {
         name: 'Arbitrage Calculator',
         gh_link: 'https://github.com/sbrcly/Arbitrage-Public',
         img: '/with_arbs3.png',
