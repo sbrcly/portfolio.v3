@@ -586,6 +586,10 @@ li i {
     height: auto;
 }
 /* SECTION 2 */
+#my-work-blurb {
+    margin-top: 1rem;
+    font-size: .75rem;
+}
 #Projects {
     flex-direction: column;
 }
@@ -1116,6 +1120,10 @@ footer.showSection {
     #my-work span {
         margin-right: 0;
         animation: none;
+    }
+    #my-work-blurb {
+        margin-top: 0rem;
+        margin-bottom: .5rem;
     }
     #section-1-heading,
     #section-2-heading {
