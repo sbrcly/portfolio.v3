@@ -533,19 +533,38 @@ header.showSection {
     display: flex;
     align-items: center;
 }
-#triplebyte {
-    width: 33.33333vw;
-    max-width: 700px;
+.tbContainer {
+    position: relative;
+    width: 50vw;
+    min-width: 400px;
     height: auto;
-    margin: 0 auto;
+    margin: auto;
+}
+.tbContainer .image-backlay {
+    position: absolute;
+    top: 6%;
+    left: 5%;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #fff;
+    border-radius: 3px;
+    z-index: -1;
+}
+.tbImg {
+    border-radius: 5px;
+    overflow: hidden;
+}
+#triplebyte {
+    width: 100%;
+    height: auto;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 1);
     transition: all .3s;
 }
 #triplebyte:hover {
-    transform: scale(1.01);
+    transform: scale(1.3);
     box-shadow: 0 0 50px rgba(0, 0, 0, 1);
-    transition: all .3s;
+    transition: all .5s;
 }
 #about-me span,
 #my-work span {
@@ -779,10 +798,6 @@ li i {
     border: 2px solid #fff;
     border-radius: 3px;
     z-index: -1;
-}
-.project-2-right .image-backlay.animateBg,
-.project-4-right .image-backlay.animateBg {
-    animation: animateBg .2s linear forwards;
 }
 .project-2-right .image-overlay,
 .project-4-right .image-overlay {
@@ -1134,14 +1149,9 @@ footer.showSection {
     }
     #About {
         flex-direction: column;
-        /* align-items: center; */
     }
-    #triplebyte {
-        width: 700px;
-        max-width: 85vw;
-        height: auto;
-        margin: 5rem auto 0 auto;
-        box-shadow: 0 0 50px rgba(0, 0, 0, 1);
+    .tbContainer {
+        display: none;
     }
     #about-me span,
     #my-work span {
