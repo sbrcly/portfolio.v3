@@ -530,6 +530,22 @@ header.showSection {
 }
 #About {
     margin-top: 0;
+    display: flex;
+    align-items: center;
+}
+#triplebyte {
+    width: 33.33333vw;
+    max-width: 700px;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+    transition: all .3s;
+}
+#triplebyte:hover {
+    transform: scale(1.01);
+    box-shadow: 0 0 50px rgba(0, 0, 0, 1);
+    transition: all .3s;
 }
 #about-me span,
 #my-work span {
@@ -1075,7 +1091,7 @@ footer.showSection {
         text-align: center;
     }
 }
-@media screen and (max-width: 901px){
+@media screen and (max-width: 913px){
     html {
         font-size: 14px;
     }
@@ -1115,6 +1131,17 @@ footer.showSection {
     .section {
         max-width: 85vw;
         margin: 10vh auto;
+    }
+    #About {
+        flex-direction: column;
+        /* align-items: center; */
+    }
+    #triplebyte {
+        width: 700px;
+        max-width: 85vw;
+        height: auto;
+        margin: 5rem auto 0 auto;
+        box-shadow: 0 0 50px rgba(0, 0, 0, 1);
     }
     #about-me span,
     #my-work span {
