@@ -43,7 +43,7 @@ const mainProjects = [
         alt: 'Photo of Betting Odds Table Project',
         pub_priv: '(Private)',
         description: 'A sports trading tool that displays second by second odds from an assortment of books on a variety of markets and sports.',
-        skills_used: ['JavaScript', 'Node.js', 'Express', 'Socket.io', 'MySQL', 'GCP', 'BigQuery'],
+        skills_used: ['JavaScript', 'HTML', 'CSS', 'Node.js', 'Express', 'Socket.io', 'MySQL', 'GCP', 'BigQuery'],
         disabled: true
     },
     {
@@ -53,7 +53,7 @@ const mainProjects = [
         alt: 'Photo of Arbitrage Project',
         pub_priv: '(Private)',
         description: 'A sports trading tool that compares Caesars odds against other books to find any potential arbitrage betting opportunities. Updates every minute.',
-        skills_used: ['JavaScript', 'Node.js', 'Express', 'Socket.io', 'API', 'MySQL', 'GCP'],
+        skills_used: ['JavaScript', 'HTML', 'CSS', 'Node.js', 'Express', 'Socket.io', 'API', 'MySQL', 'GCP'],
         disabled: true
     },
     {
@@ -63,7 +63,7 @@ const mainProjects = [
         alt: 'Photo of Trading Schedule',
         pub_priv: '(Private)',
         description: 'A scheduling application for sports traders. Pulls in game data and assigns traders to those games.',
-        skills_used: ['JavaScript', 'Node.js', 'Express', 'Socket.io', 'API', 'MySQL', 'GCP'],
+        skills_used: ['JavaScript', 'HTML', 'CSS', 'Node.js', 'Express', 'Socket.io', 'API', 'MySQL', 'GCP'],
         disabled: true
     },
     {

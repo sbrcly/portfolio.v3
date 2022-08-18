@@ -737,11 +737,16 @@ li i {
     z-index: 9;
 }
 .tools-used {
+    width: 115%;
     font-size: .8rem;
     text-align: center;
     font-family: 'Playfair Display', serif;
     z-index: 9;
     margin-bottom: 1rem;
+}
+.tools-used p {
+    display: flex;
+    flex-wrap: wrap;
 }
 .tools-used p span {
     font-family: 'Share Tech Mono', monospace;
