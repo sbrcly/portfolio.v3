@@ -129,8 +129,6 @@ const jobs = [
     'softwareDeveloper.',
     'programmer.',
     'developer.',
-    'computer_programmer.',
-    'computerProgrammer.',
     'web_developer.',
     'webDeveloper.'
 ];
