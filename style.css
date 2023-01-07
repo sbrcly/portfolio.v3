@@ -989,18 +989,7 @@ footer {
     color: #fff;
     font-family: 'Share Tech Mono', monospace;
     font-weight: 100;
-    text-shadow:
-        /* White glow */
-        0 0 3px #fff,
-        0 0 5px #fff,
-        0 0 10px #fff,
-        /* Green glow */
-        0 0 10px #fff,
-        0 0 15px #fff,
-        0 0 20px #fff,
-        0 0 25px #fff,
-        0 0 30px #fff;
-    animation: flicker2 1.5s infinite alternate;
+    /* animation: flicker2 1.5s infinite alternate; */
 }
 footer.showSection {
     display: flex;
@@ -1013,11 +1002,30 @@ footer.showSection {
 .footer-links {
     display: none;
 }
+
+footer p {
+    font-size: 14px;
+}
+
+footer p a {
+    font-size: 14px;
+    color: #5ff4d2;
+    opacity: 1;
+    transition: all .2s;
+}
+
+footer p a:hover {
+    color: #ccd6f6;
+    transform: all .2s;
+}
+
 /* KEEP AT BOTTOM OF SCRIPT */
 .unhide {
     opacity: 1;
     transition: all 1s;
 }
+
+
 @keyframes flicker2 {
     0%, 18%, 22%, 25%, 53%, 57%, 100% {
       text-shadow:
