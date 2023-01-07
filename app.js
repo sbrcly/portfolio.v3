@@ -30,7 +30,7 @@ const skills1 = document.querySelector('#skills-list-1');
 const skills2 = document.querySelector('#skills-list-2');
 const skills3 = document.querySelector('#skills-list-3');
 
-const skills = ['JavaScript', 'Node.js', 'Python', 'HTML & CSS', 'MySQL', 'BigQuery', 'Looker', 'GCP', 'React', 'Bootstrap', 'Express', 'Socket.io'];
+const skills = ['JavaScript', 'Node.js', 'Python', 'HTML & CSS', 'MySQL', 'BigQuery', 'MongoDB', 'GCP', 'React', 'Bootstrap', 'Express', 'Socket.io'];
 
 // SECTION 2 SELECTORS
 const section2 = document.querySelector('#Projects');
