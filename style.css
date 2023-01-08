@@ -989,6 +989,7 @@ footer {
     color: #fff;
     font-family: 'Share Tech Mono', monospace;
     font-weight: 100;
+    
     /* animation: flicker2 1.5s infinite alternate; */
 }
 footer.showSection {
@@ -1005,6 +1006,7 @@ footer.showSection {
 
 footer p {
     font-size: 14px;
+    text-align: center;
 }
 
 footer p a {
