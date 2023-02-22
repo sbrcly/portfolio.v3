@@ -18,7 +18,6 @@ const fullSizeNav = document.querySelector('#full-size-nav');
 // HEADER SELECTORS
 const header = document.querySelector('header');
 const headerIntro = document.querySelector('#headerIntro');
-const myCompany = document.querySelector('#myCompany');
 const myJob = document.querySelector('#myJob span');
 
 // ALL SECTIONS
@@ -272,12 +271,6 @@ class CreatePage {
             setTimeout(() => {
                 headerIntro.classList.remove('runAnimation');
             },1100);
-        });
-        myCompany.addEventListener('mouseover', () => {
-            myCompany.firstElementChild.classList.add('removeOverlay');
-        });
-        myCompany.addEventListener('mouseout', () => {
-            myCompany.firstElementChild.classList.remove('removeOverlay');
         });
         window.addEventListener('scroll', (e) => {
             this.scrollActions(e);
