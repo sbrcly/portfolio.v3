@@ -42,7 +42,7 @@ const mainProjects = [
         alt: 'Photo of Betting Odds Table Project',
         pub_priv: '(Private)',
         description: 'A sports trading tool that displays second by second odds from an assortment of books on a variety of markets and sports.',
-        skills_used: ['JavaScript', 'HTML', 'CSS', 'Node.js', 'Express', 'Socket.io', 'MySQL', 'GCP', 'BigQuery'],
+        skills_used: ['JavaScript', 'HTML', 'CSS', 'Node.js', 'Express', 'MySQL', 'GCP'],
         disabled: true
     },
     {
@@ -52,7 +52,7 @@ const mainProjects = [
         alt: 'Photo of Arbitrage Project',
         pub_priv: '(Private)',
         description: 'A sports trading tool that compares Caesars odds against other books to find any potential arbitrage betting opportunities. Updates every minute.',
-        skills_used: ['JavaScript', 'HTML', 'CSS', 'Node.js', 'Express', 'Socket.io', 'API', 'MySQL', 'GCP'],
+        skills_used: ['JavaScript', 'HTML', 'CSS', 'Node.js', 'Express', 'API', 'MySQL', 'GCP'],
         disabled: true
     },
     {
@@ -62,7 +62,7 @@ const mainProjects = [
         alt: 'Photo of Trading Schedule',
         pub_priv: '(Private)',
         description: 'A scheduling application for sports traders. Pulls in game data and assigns traders to those games.',
-        skills_used: ['JavaScript', 'HTML', 'CSS', 'Node.js', 'Express', 'Socket.io', 'API', 'MySQL', 'GCP'],
+        skills_used: ['JavaScript', 'HTML', 'CSS', 'Node.js', 'Express', 'API', 'MySQL', 'GCP'],
         disabled: true
     },
     {
@@ -72,7 +72,7 @@ const mainProjects = [
         alt: 'Photo of In-Game Odds Tracker',
         pub_priv: '(Private)',
         description: 'A sports trading tool that tracks, stores and graphs the in-game odds for Caesars and their competitors on a second by second basis.',
-        skills_used: ['Node.js', 'MySQL', 'GCP', 'Express', 'API', 'Python', 'Excel'],
+        skills_used: ['Node.js', 'MySQL', 'GCP', 'Express', 'API', 'Python'],
         disabled: true
     },
 ];
@@ -92,7 +92,7 @@ const pastProjects = [
         liveLink: 'http://sbrcly.com',
         gh_link: `https://github.com/sbrcly`,
     }
-]
+];
 
 // FOOTER SELECTORS
 const footer = document.querySelector('footer');
