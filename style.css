@@ -287,7 +287,7 @@ ul {
     margin-left: 65%;
     transition: all .5s;
 }
-.line {
+.burger .line {
     height: 33.33333%;
     border-top: 2px solid #fff;
     transition: all .5s;
@@ -570,7 +570,7 @@ header.showSection {
     margin-left: 2rem;
     height: 1px;
     width: 50%;
-    border-bottom: 1px solid #d8d0c57a;
+    border-bottom: 1px solid #d8d0c54b;
 }
 #section-1-body p {
     color: #f2efea60;
@@ -632,7 +632,7 @@ li i {
     margin-left: 2rem;
     height: 1px;
     width: 35%;
-    border-bottom: 1px solid #d8d0c57a;
+    border-bottom: 1px solid #d8d0c54b;
 }
 .disabled-link {
     font-size: 1.25rem;

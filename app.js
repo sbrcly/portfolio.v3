@@ -77,7 +77,7 @@ const mainProjects = [
     },
 ];
 
-const portfolioArchives = [
+const pastProjects = [
     {
         name: 'Personal Portfolio V1',
         description: `This is the first portfolio I ever made. I no longer maintain this project so it's likely some features will no longer function as intended.`,
@@ -159,7 +159,7 @@ class CreatePage {
         this.createListeners();
         this.appendSkills();
         this.appendMainProjects();
-        this.appendPortfolioArchives();
+        this.appendpastProjects();
         this.scrollOnLoad();
         
     }
@@ -427,28 +427,20 @@ class CreatePage {
             }
         }
     }
-    appendPortfolioArchives = () => {
+    appendpastProjects = () => {
         const otherProjects = document.createElement('div');
         otherProjects.classList.add('project');
         otherProjects.classList.add('other-projects');
 
         const otherProjectsHeader = document.createElement('h3');
-        otherProjectsHeader.innerText = 'Portfolio Archives';
-
-        const otherProjectsP1 = document.createElement('p');
-        otherProjectsP1.classList.add('other-project-blurb');
-        otherProjectsP1.innerText = `All old projects are contained in these archived portfolios.`;
-        
-        const otherProjectsP2 = document.createElement('p');
-        otherProjectsP2.classList.add('other-project-blurb');
-        otherProjectsP2.innerText = `New projects will be added to the list above.`;
+        otherProjectsHeader.innerText = 'More Projects!';
 
         const otherProjectTiles = document.createElement('div');
         otherProjectTiles.classList.add('other-project-tiles');
 
-        otherProjects.append(otherProjectsHeader, otherProjectsP1, otherProjectsP2, otherProjectTiles);
+        otherProjects.append(otherProjectsHeader, otherProjectTiles);
 
-        for (let i = 0; i < portfolioArchives.length; i++) {
+        for (let i = 0; i < pastProjects.length; i++) {
             const portfolioDiv = document.createElement('div');
             portfolioDiv.classList.add('other-project');
             portfolioDiv.classList.add(`other-project-${i+1}`);
@@ -458,13 +450,13 @@ class CreatePage {
             portfolioDiv.append(portfolioHeader);
 
             const gitHubLink = document.createElement('a');
-            gitHubLink.setAttribute('href', portfolioArchives[i].gh_link);
+            gitHubLink.setAttribute('href', pastProjects[i].gh_link);
             gitHubLink.setAttribute('target', '_blank');
             gitHubLink.classList.add('project-code');
             gitHubLink.innerHTML = `<i class="fa-brands fa-github-alt"></i>`;
 
             const liveLink = document.createElement('a');
-            liveLink.setAttribute('href', portfolioArchives[i].liveLink);
+            liveLink.setAttribute('href', pastProjects[i].liveLink);
             liveLink.setAttribute('target', '_blank');
             liveLink.innerHTML = `<i class="fa-solid fa-arrow-up-right-from-square project-link"></i>`;
 
@@ -475,16 +467,16 @@ class CreatePage {
             portfolioDiv.append(portfolioBody);
 
             const portfolioTitle = document.createElement('h4');
-            portfolioTitle.innerText = portfolioArchives[i].name;
+            portfolioTitle.innerText = pastProjects[i].name;
 
             const portfolioDescription = document.createElement('p');
-            portfolioDescription.innerText = portfolioArchives[i].description;
+            portfolioDescription.innerText = pastProjects[i].description;
 
             portfolioBody.append(portfolioTitle, portfolioDescription);
 
             const portfolioSkills = document.createElement('div');
             portfolioSkills.classList.add('other-project-tech');
-            portfolioSkills.innerHTML = `<p><span>${portfolioArchives[i].skills_used.join('</span><span>')}</span></p>`;
+            portfolioSkills.innerHTML = `<p><span>${pastProjects[i].skills_used.join('</span><span>')}</span></p>`;
             portfolioDiv.append(portfolioSkills);
 
             otherProjectTiles.append(portfolioDiv);            
@@ -537,7 +529,7 @@ class CreatePage {
                 }   else {
                     project.classList.remove('unhide');
                 };
-            }
+            };
         };
     }
 }
